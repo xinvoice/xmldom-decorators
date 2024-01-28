@@ -213,7 +213,7 @@ export class Attribute {
     ref?: QName;
 
     @XMLAttribute()
-    use?: string;
+    use?: "required" | "optional" | "prohibited"
 
     @XMLElement({types:[{name: "simpleType", namespaceUri: "http://www.w3.org/2001/XMLSchema"}]})
     simpleType?: SimpleType;
