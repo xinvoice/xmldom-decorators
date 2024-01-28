@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-import { XMLDecoratorDeserializer } from "xmldom-decorators";
+import { XMLDecoratorDeserializer } from "@xinvoice/xmldom-decorators";
 import { weatherdata } from "./met.no/reference";
 import { data_set_description } from "./openml.org/reference";
 

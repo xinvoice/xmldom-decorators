@@ -1,4 +1,4 @@
-import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "xmldom-decorators";
+import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
 
 @XMLRoot({name: "", namespaceUri: ""})
 export class LocationTypeForestFire {

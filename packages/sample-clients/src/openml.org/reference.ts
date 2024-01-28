@@ -1,4 +1,4 @@
-import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "xmldom-decorators";
+import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
 
 @XMLRoot({name: "data_set_description", namespaceUri: "http://openml.org/openml"})
 export class data_set_description {

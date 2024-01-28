@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-import { XMLDecoratorDeserializer } from "xmldom-decorators";
+import { XMLDecoratorDeserializer } from "@xinvoice/xmldom-decorators";
 import { Schema, QName, SimpleType, ComplexType, Element, Attribute } from "./xsdschema";
 
 export class SchemaCollection {
