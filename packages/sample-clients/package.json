@@ -1,7 +1,7 @@
 {
   "name": "@xinvoice/sample-clients",
   "private": true,
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Sample API clients generated using xmldom-decorators-cli",
   "author": "andersnm (forked by xinvoice)",
   "homepage": "https://github.com/xinvoice/xmldom-decorators#readme",
