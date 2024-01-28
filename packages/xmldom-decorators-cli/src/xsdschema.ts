@@ -1,7 +1,7 @@
-import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from 'xmldom-decorators';
+import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from '@xinvoice/xmldom-decorators';
 // import { ElementAttributes } from 'xmldom/sax';
-import { DeserializerContext } from 'xmldom-decorators';
-import { SerializerContext } from 'xmldom-decorators';
+import { DeserializerContext } from '@xinvoice/xmldom-decorators';
+import { SerializerContext } from '@xinvoice/xmldom-decorators';
 
 export interface QName {
     localName: string;
