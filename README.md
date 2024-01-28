@@ -15,7 +15,7 @@ See [packages/xmldom-decorators-cli](packages/xmldom-decorators-cli)
 First check out the source code and bootstrap the monorepo build environment:
 
 ```bash
-git clone https://github.com/andersnm/xmldom-decorators.git
+git clone https://github.com/xinvoice/xmldom-decorators.git
 cd xmldom-decorators
 npm install   # installs blerf in the root project
 ```
@@ -26,4 +26,14 @@ Build, run tests and execute a REST API sample:
 npm run build # shortcut for ./node_modules/.bin/blerf build
 npm run test  # shortcut for ./node_modules/.bin/blerf test
 node ./packages/sample-clients location
+```
+
+## Publishing a version
+
+To publish a new version, simply create a new tag and push it:
+
+```
+
+npm run version:<minor|patch|major>
+git push --follow-tags
 ```

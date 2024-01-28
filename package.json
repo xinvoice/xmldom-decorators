@@ -9,6 +9,16 @@
     "build": "blerf build",
     "test": "blerf build && blerf test",
     "pack": "blerf build && blerf pack:publish",
-    "deploy": "blerf build && blerf pack:deploy"
-  }
+    "deploy": "blerf build && blerf pack:deploy",
+    "version:patch": "npm version patch --workspaces && git add **/package.json",
+    "version:minor": "npm version minor --workspaces && git add **/package.json",
+    "version:major": "npm version major --workspaces && git add **/package.json"
+  },
+  "version": "0.0.3",
+  "workspaces": [
+    "packages/xmldom-decorators-cli",
+    "packages/xmldom-decorators-test",
+    "packages/xmldom-decorators",
+    "packages/sample-clients"
+  ]
 }
