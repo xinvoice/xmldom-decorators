@@ -3,7 +3,7 @@
 ## Install
 
 ```
-npm install xmldom-decorators
+npm install @xinvoice/xmldom-decorators
 ```
 
 Enable emitting decorator metadata in tsconfig.json:
@@ -25,14 +25,14 @@ Given a TypeScript class defining the XML schema:
 ```typescript
 @XMLRoot()
 export class MyXmlType {
-	@XMLAttribute()
-	a: number = 0;
+  @XMLAttribute()
+  a: number = 0;
 
-	@XMLElement()
-	b: string = "";
+  @XMLElement()
+  b: string = "";
 
-	@XMLArray({itemTypes: [{itemName: "v", itemType: () => Number}]})
-	n: number[] = [];
+  @XMLArray({ itemTypes: [{ itemName: "v", itemType: () => Number }] })
+  n: number[] = [];
 }
 ```
 
@@ -40,9 +40,9 @@ export class MyXmlType {
 
 ```typescript
 const data: MyXmlType = {
-	a: 1,
-	b: "c",
-	n: [1,2,3]
+  a: 1,
+  b: "c",
+  n: [1, 2, 3],
 };
 
 const serializer = new XMLDecoratorSerializer();
@@ -64,7 +64,6 @@ var xml = `<MyXmlType a="1">
 const deserializer = new XMLDecoratorDeserializer();
 const data = deserializer.deserialize(xml, MyXmlType);
 ```
-
 
 ## Classes
 
@@ -125,7 +124,7 @@ Applied to classes which define a root XML document element.
 
 Applied to class members. Maps the class member to an XML element. Must have a value type or class type. Throws a runtime error if applied to an array type.
 
-It is permitted to map multiple name/type pairs to a class member. *One of* the types will be (de)serialized. During serialization, the item type determines which XML element will be written. During deserialization, the XML element name determines which item type will be read.
+It is permitted to map multiple name/type pairs to a class member. _One of_ the types will be (de)serialized. During serialization, the item type determines which XML element will be written. During deserialization, the XML element name determines which item type will be read.
 
 ```ts
 @XMLElement({
@@ -187,7 +186,7 @@ Applied to class members which define an attribute on an XML element. Must have 
 
 Applied to class members which define an array of XML elements, with or without a container XML element. Throws a runtime error if applied to a type which is not an array type.
 
-It is permitted to map multiple name/type pairs to an array class member. *Any of* the types will be (de)serialized. During serialization, the item type determines which XML element will be written. During deserialization, the XML element name determines which item type will be read.
+It is permitted to map multiple name/type pairs to an array class member. _Any of_ the types will be (de)serialized. During serialization, the item type determines which XML element will be written. During deserialization, the XML element name determines which item type will be read.
 
 ```ts
 @XMLArray({
@@ -231,7 +230,6 @@ It is permitted to map multiple name/type pairs to an array class member. *Any o
 
 Applied to a class member which define the text content of an XML element. There can only be one @XMLText() decorator per class.
 
-
 ```ts
 @XMLText({
   // Optional override of the decorated type.
@@ -251,35 +249,33 @@ The following class(es) demonstrate potential pitfalls with decorators applied t
 ```typescript
 @XMLRoot()
 class Test {
-	// Properties without a decorator will not be (de)serialized
-	notEmittedProperty: string = "";
+  // Properties without a decorator will not be (de)serialized
+  notEmittedProperty: string = "";
 
-	// The XML array itemType must be a callback which returns the array item type
-	// Decorator metadata cannot directly reference types declared later in the file.
-	// Decorator metadata does not have information about array item types.
-	@XMLArray({itemTypes: [{itemType: () => Number}]})
-	intArray: Number[] = [];
+  // The XML array itemType must be a callback which returns the array item type
+  // Decorator metadata cannot directly reference types declared later in the file.
+  // Decorator metadata does not have information about array item types.
+  @XMLArray({ itemTypes: [{ itemType: () => Number }] })
+  intArray: Number[] = [];
 
-	// Optional attributes must be set explicitly (NOTE: not implemented yet)
-	// Decorator metadata does have information about the '?' type modifier.
-	@XMLElement({optional: true})
-	value?: string;
+  // Optional attributes must be set explicitly (NOTE: not implemented yet)
+  // Decorator metadata does have information about the '?' type modifier.
+  @XMLElement({ optional: true })
+  value?: string;
 
-	// Decorators applied to members with a class type declared later in the file
-	// will cause a runtime error. This means ordering of classes is important,
-	// and some situations require a workaround using arrays.
+  // Decorators applied to members with a class type declared later in the file
+  // will cause a runtime error. This means ordering of classes is important,
+  // and some situations require a workaround using arrays.
 
-	// @XMLElement() <--- RUNTIME ERROR "ForwardClass is not defined"
-	// forward?: ForwardClass;
+  // @XMLElement() <--- RUNTIME ERROR "ForwardClass is not defined"
+  // forward?: ForwardClass;
 
-	// Workaround with array still allows to (de)serialize the XML:
-	@XMLArray({nested: false, itemTypes: [{itemType: () => ForwardClass}]})
-	forward?: ForwardClass[];
+  // Workaround with array still allows to (de)serialize the XML:
+  @XMLArray({ nested: false, itemTypes: [{ itemType: () => ForwardClass }] })
+  forward?: ForwardClass[];
 }
 
-class ForwardClass {
-}
-
+class ForwardClass {}
 ```
 
 ## More examples
@@ -295,6 +291,7 @@ F.ex an API can return XML for either a message type, or an error type:
 <!-- XML returned on error: -->
 <error>...</error>
 ```
+
 To handle this, either
 
 1. Specify multiple @XMLRoot decorators and design the class to contain all fields

@@ -1,10 +1,10 @@
 {
-  "name": "sample-clients",
+  "name": "@xinvoice/sample-clients",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Sample API clients generated using xmldom-decorators-cli",
-  "author": "andersnm",
-  "homepage": "https://github.com/andersnm/xmldom-decorators#readme",
+  "author": "andersnm (forked by xinvoice)",
+  "homepage": "https://github.com/xinvoice/xmldom-decorators#readme",
   "license": "MIT",
   "main": "lib/index.js",
   "directories": {
@@ -16,7 +16,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andersnm/xmldom-decorators.git"
+    "url": "git+https://github.com/xinvoice/xmldom-decorators.git"
   },
   "scripts": {
     "build": "npm run xsd-metno && npm run xsd-openml && tsc",
@@ -24,7 +24,7 @@
     "xsd-openml": "xmldom-decorators-cli xsd/openml.org/openml.data.upload.xsd > src/openml.org/reference.ts"
   },
   "bugs": {
-    "url": "https://github.com/andersnm/xmldom-decorators/issues"
+    "url": "https://github.com/xinvoice/xmldom-decorators/issues"
   },
   "devDependencies": {
     "@types/node": "^10.12.7",
