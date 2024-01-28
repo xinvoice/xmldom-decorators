@@ -1,6 +1,6 @@
 {
   "name": "@xinvoice/xmldom-decorators-cli",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Command line tool to convert XSD to TypeScript classes using xmldom-decorators",
   "author": "andersnm (forked by xinvoice)",
   "license": "MIT",

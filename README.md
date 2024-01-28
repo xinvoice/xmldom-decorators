@@ -34,6 +34,6 @@ To publish a new version, simply create a new tag and push it:
 
 ```
 
-npm run version:<minor|patch|major>
+npm version <minor|patch|major> --ws --include-workspace-root
 git push --follow-tags
 ```
