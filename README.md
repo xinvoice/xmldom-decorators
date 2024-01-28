@@ -34,6 +34,8 @@ To publish a new version, simply create a new tag and push it:
 
 ```
 
-npm version <minor|patch|major> --ws --include-workspace-root
+npm version <minor|patch|major> --ws
+git add **/package.json
+npm version patch --include-workspace-root --force
 git push --follow-tags
 ```
