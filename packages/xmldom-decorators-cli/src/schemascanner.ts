@@ -509,7 +509,8 @@ class SchemaClassVisitor extends SchemaVisitor {
             super.visitAttribute(attribute);
         } else {
             const top = this.typeStack[this.typeStack.length - 1];
-            let attributeType: SchemaClass| undefined;
+            let attributeType: SchemaClass | undefined;
+            const useType = attribute.use
             while (true) {
                 if (attribute.type) {
                     attributeType = this.mapper.getSchemaClassByQName(attribute.type);
@@ -569,6 +570,7 @@ class SchemaClassVisitor extends SchemaVisitor {
                 name: attribute.name || "",
                 javaScriptName: getMemberName(attribute.name) || "",
                 type: attributeType,
+                use: useType,
                 xmlType: "attribute",
                 namespaceUri: this.schema ? (this.schema.targetNamespace || null) : null,
             });

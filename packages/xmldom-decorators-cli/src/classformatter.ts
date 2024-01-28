@@ -57,6 +57,10 @@ function formatDefault(m: SchemaMember): string {
         return "";
     }
 
+    if (m.use === "optional") {
+        return " = undefined";
+    }
+
     if (isArrayElement(m)) {
         return " = []";
     }
@@ -97,7 +101,7 @@ function isArrayElement(e: SchemaMember): boolean {
 }
 
 function formatOptional(m: SchemaMember): string {
-    if (m.minOccurs === 0) {
+    if (m.minOccurs === 0 || m.use === "optional") {
         return "?";
     }
 
