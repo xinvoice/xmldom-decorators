@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`attribute-use-optional should generate correct code for use=optional attribute: 
+        import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";                                      
+                                                                                                                                               
+      @XMLRoot({name: "exampleElement", namespaceUri: ""})                                                                                     
+      export class exampleElement {                                                                                                            
+          @XMLAttribute()
+          optionalAttribute?: string = undefined;
+      } 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+@XMLRoot({name: "exampleElement", namespaceUri: ""})
+export class exampleElement {
+    @XMLAttribute()
+    optionalAttribute?: string = undefined;
+
+}
+
+"
+`;

@@ -8,6 +8,7 @@ export interface SchemaMember {
     xmlType: 'attribute' | 'element' | 'array' | 'text';
     minOccurs?: number;
     maxOccurs?: string;
+    use?: "required" | "optional" | "prohibited"
 }
 
 export interface SchemaClass {
