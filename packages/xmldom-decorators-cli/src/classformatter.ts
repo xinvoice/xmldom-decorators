@@ -4,7 +4,7 @@ import { SchemaClass, SchemaMember } from "./classtypes";
 export function formatClasses(classes: SchemaClass[]): string {
     const output: string[] = [];
 
-    output.push("import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from \"xmldom-decorators\";" + EOL + EOL)
+    output.push("import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from \"@xinvoice/xmldom-decorators\";" + EOL + EOL)
     
     const reverse = new Array(...classes).reverse();
 
