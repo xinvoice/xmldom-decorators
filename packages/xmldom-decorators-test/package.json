@@ -1,13 +1,13 @@
 {
   "name": "@xinvoice/xmldom-decorators-test",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "TypeScript decorators and (de-)serializer for xmldom",
   "author": "andersnm (forked from by xinvoice)",
   "license": "MIT",
   "homepage": "https://github.com/xinvoice/xmldom-decorators",
   "repository": {
     "type": "git",
-    "url": "https://github.com/xinvoice/xmldom-decorators.git"
+    "url": "git+https://github.com/xinvoice/xmldom-decorators.git"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
