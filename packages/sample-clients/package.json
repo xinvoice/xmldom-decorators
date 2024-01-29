@@ -27,13 +27,13 @@
     "url": "https://github.com/xinvoice/xmldom-decorators/issues"
   },
   "devDependencies": {
-    "@types/node": "^10.12.7",
-    "@types/node-fetch": "^2.1.6",
-    "typescript": "^3.3.1",
+    "@types/node": "^20.11.10",
+    "@types/node-fetch": "^2.6.11",
+    "typescript": "^5.3.3",
     "@xinvoice/xmldom-decorators-cli": "file:../xmldom-decorators-cli"
   },
   "dependencies": {
-    "node-fetch": "2.3.0",
+    "node-fetch": "3.3.2",
     "@xinvoice/xmldom-decorators": "file:../xmldom-decorators"
   },
   "blerf": {
