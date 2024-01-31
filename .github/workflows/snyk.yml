@@ -1,0 +1,24 @@
+name: Scan for vulnerabilities with Snyk
+on: push
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "21.x"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build (temporary)
+        run: npm run build 
+
+      - name: Run Snyk to check for vulnerabilities
+        uses: snyk/actions/node@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          command: monitor --all-projects

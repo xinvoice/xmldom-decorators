@@ -19,9 +19,9 @@
     "test": "alsatian lib/*.test.js"
   },
   "devDependencies": {
-    "@types/node": "^10.12.7",
-    "typescript": "^3.3.1",
-    "alsatian": "2.4.0"
+    "@types/node": "^20.11.10",
+    "typescript": "^5.3.3",
+    "alsatian": "3.2.1"
   },
   "dependencies": {
     "xmldom-decorators": "file:../xmldom-decorators",
