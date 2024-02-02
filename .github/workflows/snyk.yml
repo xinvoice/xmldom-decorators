@@ -21,7 +21,7 @@ jobs:
         run: npm ci
 
       - name: Build (temporary)
-        run: npm run build:ci
+        run: npm run build
 
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/node@master

@@ -43,14 +43,8 @@ jobs:
       # Set up GitHub Actions caching for Wireit.
       - uses: google/wireit@f3a3c79c553122e2fe5829eeac7d815326502903 # setup-github-actions-caching/v1
 
-      - name: Build xmldom-* packages
+      - name: Build every package
         run: npm run build
-
-      - name: List .bin files
-        run: ls -la node_modules/.bin
-
-      - name: Build sample packages
-        run: npm run build:sample
 
       - name: Test code
         run: npm run test
