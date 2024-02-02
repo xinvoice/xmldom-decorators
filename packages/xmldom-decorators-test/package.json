@@ -24,8 +24,8 @@
     "alsatian": "3.2.1"
   },
   "dependencies": {
-    "xmldom-decorators": "file:../xmldom-decorators",
-    "xmldom-decorators-cli": "file:../xmldom-decorators-cli"
+    "@xinvoice/xmldom-decorators": "file:../xmldom-decorators",
+    "@xinvoice/xmldom-decorators-cli": "file:../xmldom-decorators-cli"
   },
   "blerf": {
     "coverageFrom": "../xmldom-decorators/lib",

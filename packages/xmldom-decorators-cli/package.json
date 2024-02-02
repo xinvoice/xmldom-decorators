@@ -12,7 +12,7 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "bin": {
-    "xmldom-decorators-cli": "lib/index.js"
+    "@xinvoice/xmldom-decorators-cli": "lib/index.js"
   },
   "files": [
     "lib"

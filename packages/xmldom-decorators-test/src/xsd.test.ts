@@ -1,5 +1,5 @@
-import { SchemaMapper } from 'xmldom-decorators-cli/lib/schemascanner';
-import { Schema, Element, ComplexType, ComplexContent, ComplexContentExtension, Sequence } from 'xmldom-decorators-cli/lib/xsdschema';
+import { SchemaMapper } from '@xinvoice/xmldom-decorators-cli/lib/schemascanner';
+import { Schema, Element, ComplexType, ComplexContent, ComplexContentExtension, Sequence } from '@xinvoice/xmldom-decorators-cli/lib/xsdschema';
 
 import { AsyncTest, Expect, Test, TestCase, TestFixture } from "alsatian";
 
