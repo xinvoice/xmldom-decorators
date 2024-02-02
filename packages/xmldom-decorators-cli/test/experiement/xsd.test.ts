@@ -13,7 +13,7 @@ describe("EXPERIMENT: xsd command", () => {
     });
 
     it("should generate correct code for xsd file and write to console", () => {
-        const logSpy = jest.spyOn(console, 'log')
+        const logSpy = jest.spyOn(console, 'log').mockImplementation();
         process.argv = ["node", "cli", "xsd", "./test/data/cross-industry-invoice/FACTUR-X_EN16931.xsd"];
         startExperimentCli()
         expect(logSpy).toMatchSnapshot()
