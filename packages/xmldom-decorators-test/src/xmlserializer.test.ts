@@ -1,6 +1,6 @@
-import { XMLRoot, XMLElement, XMLAttribute, XMLArray, XMLText } from 'xmldom-decorators';
-import { XMLDecoratorSerializer, SerializerContext } from 'xmldom-decorators';
-import { XMLDecoratorDeserializer, DeserializerContext } from 'xmldom-decorators';
+import { XMLRoot, XMLElement, XMLAttribute, XMLArray, XMLText } from '@xinvoice/xmldom-decorators';
+import { XMLDecoratorSerializer, SerializerContext } from '@xinvoice/xmldom-decorators';
+import { XMLDecoratorDeserializer, DeserializerContext } from '@xinvoice/xmldom-decorators';
 import { Test, Expect, TestFixture, IgnoreTest } from "alsatian";
 
 const expect = Expect;
@@ -638,6 +638,6 @@ function deserialize(text: string, type: Function|Function[]): any {
 	return deserializer.deserialize(text, type);
 }
 
-function mix<T>(target: T, source: Partial<T>): T {
+function mix<T extends object>(target: T, source: Partial<T>): T {
 	return Object.assign(target, source);
 }

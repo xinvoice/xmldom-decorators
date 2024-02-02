@@ -1,15 +1,13 @@
 {
   "name": "root",
   "private": true,
-  "devDependencies": {
-    "blerf": "https://github.com/andersnm/blerf/releases/download/v0.0.2/blerf-0.0.2.tgz"
+  "dependencies": {
+    "lerna": "^8.0.2"
   },
-  "dependencies": {},
   "scripts": {
-    "build": "blerf build",
-    "test": "blerf build && blerf test",
-    "pack": "blerf build && blerf pack:publish",
-    "deploy": "blerf build && blerf pack:deploy"
+    "build": "lerna run build",
+    "build:ci": "lerna run build --scope=@xinvoice/xmldom-*",
+    "test": "lerna run test"
   },
   "version": "1.0.5",
   "workspaces": [

@@ -13,10 +13,10 @@ export class LocationTypeForestFire {
 @XMLRoot({name: "", namespaceUri: ""})
 export class LocationTypeSymbol {
     @XMLAttribute()
-    id: string = "";
+    id?: string = undefined;
 
     @XMLAttribute()
-    name: string = "";
+    name?: string = undefined;
 
     @XMLAttribute()
     number: number = 0;
@@ -26,16 +26,16 @@ export class LocationTypeSymbol {
 @XMLRoot({name: "", namespaceUri: ""})
 export class LocationTypeWeather {
     @XMLAttribute()
-    name: string = "";
+    name?: string = undefined;
 
     @XMLAttribute()
     number: number = 0;
 
     @XMLAttribute()
-    id: string = "";
+    id?: string = undefined;
 
     @XMLAttribute()
-    symbol: number = 0;
+    symbol?: number = undefined;
 
 }
 
@@ -45,7 +45,7 @@ export class LocationTypeSnowDepth {
     cm: number = 0;
 
     @XMLAttribute()
-    id: string = "";
+    id?: string = undefined;
 
 }
 
@@ -55,13 +55,13 @@ export class LocationTypeStateOfTheSea {
     number: number = 0;
 
     @XMLAttribute()
-    meter: string = "";
+    meter?: string = undefined;
 
     @XMLAttribute()
-    name: string = "";
+    name?: string = undefined;
 
     @XMLAttribute()
-    id: string = "";
+    id?: string = undefined;
 
 }
 
@@ -71,13 +71,13 @@ export class Windspeed {
     mps: number = 0;
 
     @XMLAttribute()
-    name: string = "";
+    name?: string = undefined;
 
     @XMLAttribute()
-    beaufort: number = 0;
+    beaufort?: number = undefined;
 
     @XMLAttribute()
-    id: string = "";
+    id?: string = undefined;
 
 }
 
@@ -87,10 +87,10 @@ export class LocationTypeWindDirection {
     deg: number = 0;
 
     @XMLAttribute()
-    name: string = "";
+    name?: string = undefined;
 
     @XMLAttribute()
-    id: string = "";
+    id?: string = undefined;
 
 }
 
@@ -122,7 +122,7 @@ export class Tidalwater {
     tidal: number = 0;
 
     @XMLAttribute()
-    weathercorrection: number = 0;
+    weathercorrection?: number = undefined;
 
 }
 
@@ -170,13 +170,13 @@ export class Uv {
 @XMLRoot({name: "cloudiness", namespaceUri: ""})
 export class Cloudiness {
     @XMLAttribute()
-    eights: number = 0;
+    eights?: number = undefined;
 
     @XMLAttribute()
-    percent: string = "";
+    percent?: string = undefined;
 
     @XMLAttribute()
-    id: string = "";
+    id?: string = undefined;
 
 }
 
@@ -189,7 +189,7 @@ export class Temperature {
     value: number = 0;
 
     @XMLAttribute()
-    id: string = "";
+    id?: string = undefined;
 
 }
 
@@ -202,16 +202,16 @@ export class Precipitation {
     value: number = 0;
 
     @XMLAttribute()
-    minvalue: number = 0;
+    minvalue?: number = undefined;
 
     @XMLAttribute()
-    maxvalue: number = 0;
+    maxvalue?: number = undefined;
 
     @XMLAttribute()
-    probability: number = 0;
+    probability?: number = undefined;
 
     @XMLAttribute()
-    id: string = "";
+    id?: string = undefined;
 
 }
 
@@ -224,7 +224,7 @@ export class Pressure {
     value: number = 0;
 
     @XMLAttribute()
-    id: string = "";
+    id?: string = undefined;
 
 }
 
@@ -234,38 +234,38 @@ export class Groundcover {
     number: number = 0;
 
     @XMLAttribute()
-    name: string = "";
+    name?: string = undefined;
 
     @XMLAttribute()
-    id: string = "";
+    id?: string = undefined;
 
 }
 
 @XMLRoot({name: "locationType", namespaceUri: ""})
 export class LocationType {
     @XMLAttribute()
-    id: string = "";
+    id?: string = undefined;
 
     @XMLAttribute()
-    name: string = "";
+    name?: string = undefined;
 
     @XMLAttribute()
-    stationid: number = 0;
+    stationid?: number = undefined;
 
     @XMLAttribute()
-    country: string = "";
+    country?: string = undefined;
 
     @XMLAttribute()
-    county: string = "";
+    county?: string = undefined;
 
     @XMLAttribute()
-    latitude: string = "";
+    latitude?: string = undefined;
 
     @XMLAttribute()
-    longitude: string = "";
+    longitude?: string = undefined;
 
     @XMLAttribute()
-    altitude: string = "";
+    altitude?: string = undefined;
 
     @XMLElement({types: [{ name: "groundCover" }]})
     groundCover?: Groundcover;
@@ -413,7 +413,7 @@ export class TimeType {
     to: Date = new Date(-8640000000000000);
 
     @XMLAttribute()
-    datatype: string = "";
+    datatype?: string = undefined;
 
     @XMLArray({nested: false, itemTypes: [{itemType: () => LocationType}]})
     location: LocationType[] = [];
@@ -455,7 +455,7 @@ export class ModelType {
 @XMLRoot({name: "metaType", namespaceUri: ""})
 export class MetaType {
     @XMLAttribute()
-    licenseurl: string = "";
+    licenseurl?: string = undefined;
 
     @XMLArray({nested: false, itemTypes: [{itemType: () => ModelType}]})
     model: ModelType[] = [];

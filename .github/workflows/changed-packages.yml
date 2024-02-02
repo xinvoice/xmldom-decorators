@@ -1,0 +1,47 @@
+name: Check which packages changed
+
+permissions: read-all
+
+on:
+  workflow_call:
+    inputs:
+      check-mergeable-state:
+        default: false
+        type: boolean
+    outputs:
+      changes:
+        description: 'The packages that were changed for this PR'
+        value: ${{ jobs.check-changes.outputs.changes }}
+jobs:
+  check-changes:
+    name: Check which packages changed
+    runs-on: ubuntu-latest
+    outputs:
+      changes: ${{ steps.changes.outputs.changes }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        with:
+          fetch-depth: 2
+      - name: Check if branch is out of date
+        if: ${{ inputs.check-mergeable-state &&  github.base_ref == 'main' }}
+        run: |
+          git fetch origin main --depth 1 &&
+          git merge-base --is-ancestor origin/main @;
+      - name: Detect changed packages
+        uses: dorny/paths-filter@0bc4621a3135347011ad047f9ecf449bf72ce2bd # v3.0.0
+        id: changes
+        with:
+          filters: |
+            xmldom-decorators:
+              - '.github/workflows/ci.yml'
+              - 'packages/sample-clients/**'
+              - 'packages/xmldom-decorators/**'
+              - 'packages/xmldom-decorators-test/**'
+            xmldom-decorators-cli:
+              - '.github/workflows/ci.yml'
+              - 'packages/xmldom-decorators-cli/**'
+              - 'README.md'
+            documentation:
+              - '.github/workflows/ci.yml'
+              - 'README.md'

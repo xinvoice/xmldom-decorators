@@ -77,6 +77,10 @@ function formatDefault(m: SchemaMember): string {
         return " = new Date(-8640000000000000)";
     }
 
+    if (m.type.javaScriptType == "Boolean") {
+        return " = false"        
+    }
+
     if (m.type.type === "complexType") {
         return " = new " + m.type.javaScriptType + "()";
     }
