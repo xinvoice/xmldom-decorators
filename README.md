@@ -27,15 +27,3 @@ npm run build # shortcut for ./node_modules/.bin/blerf build
 npm run test  # shortcut for ./node_modules/.bin/blerf test
 node ./packages/sample-clients location
 ```
-
-## Publishing a version
-
-To publish a new version, simply create a new tag and push it:
-
-```
-
-npm version <minor|patch|major> --ws
-git add **/package.json
-npm version patch --include-workspace-root
-git push --follow-tags
-```
