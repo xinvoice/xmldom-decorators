@@ -43,7 +43,7 @@ jobs:
       # Set up GitHub Actions caching for Wireit.
       - uses: google/wireit@f3a3c79c553122e2fe5829eeac7d815326502903 # setup-github-actions-caching/v1
       - name: Build every package
-        run: npm run build
+        run: npm run build:ci
       - name: Test code
         run: npm run test
    
