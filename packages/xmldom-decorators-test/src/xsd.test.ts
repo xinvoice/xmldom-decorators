@@ -5,7 +5,7 @@ import { AsyncTest, Expect, Test, TestCase, TestFixture } from "alsatian";
 
 const expect = Expect;
 
-function mix<T>(target: T, source: Partial<T>): T {
+function mix<T extends object>(target: T, source: Partial<T>): T {
     return Object.assign(target, source);
 }
 
