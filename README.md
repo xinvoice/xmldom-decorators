@@ -8,7 +8,7 @@ Our journey with `xmldom-decorators` began as a necessity to adapt and evolve th
 
 **Enhanced Functionality**:
 - the new experiment CLI interface
-    - `--output-dir` generates decorators classes in specific folder
+    - `--output-dir` generate decorator classes in specific folder
 - extend the xsd specification implementation:
     - support for `use=optional` attribute
 - fix issues in codebase
@@ -20,23 +20,21 @@ Our journey with `xmldom-decorators` began as a necessity to adapt and evolve th
 
 # Getting Started
 
-This repo contains a lib to serilize/deserilaize and a CLI to generate decorators classes from your XSD speciifcation.
+This repo contains a lib to serilize/deserilaize and a CLI to generate decorator classes from your xsd specification.
 
 ## Using xmldom-decorators-cli
 
 Download the CLI to generate XML decorators classes:
 
-```bash
+```sh
 npm install @xinvoice/xmldom-decorators-cli
-```
 
-```bash
 xmldom-decorators-cli ./input-test.xsd > test-output.ts
 ```
 
 ✨ or you can use our `experiment` CLI interface to export the generated classes to your codebase using:
 
-```bash 
+```sh 
 EXPERIMENT=true xmldom-decorators-cli xsd ./input-test.xsd -o ./src/schema
 ```
 
@@ -44,7 +42,7 @@ EXPERIMENT=true xmldom-decorators-cli xsd ./input-test.xsd -o ./src/schema
 
 Download the serialize and deserialize lib using the following command:
 
-```bash
+```sh
 npm install @xinvoice/xmldom-decorators
 ```
 
