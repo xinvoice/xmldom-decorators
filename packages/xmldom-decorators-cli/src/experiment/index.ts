@@ -1,15 +1,15 @@
 // Experiment CLI
 import { Command } from 'commander';
 const program = new Command();
+import {version} from '../version.json';
 
-import { version } from '../../package.json';
 import { runXsdCommand } from './commands/xsd.command';
 
 async function startExperimentCli() {
     program
         .name('xmldom-decorators-cli')
         .description('Command line tool to generate TypeScript classes from XML Schema/XSD. The TypeScript classes can be serialized and deserialized using the xmldom-decorators library.')
-        .version(version)
+        .version(version ?? "0.0.0")
 
     program.command('xsd')
         .description('Generate TypeScript classes from XML Schema/XSD')

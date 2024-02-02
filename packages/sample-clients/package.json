@@ -20,8 +20,8 @@
   },
   "scripts": {
     "build": "npm run xsd-metno && npm run xsd-openml && tsc",
-    "xsd-metno": "node ../xmldom-decorators-cli xsd/met.no/locationforecast.xsd > src/met.no/reference.ts",
-    "xsd-openml": "node ../xmldom-decorators-cli xsd/openml.org/openml.data.upload.xsd > src/openml.org/reference.ts"
+    "xsd-metno": "xmldom-decorators-cli xsd/met.no/locationforecast.xsd > src/met.no/reference.ts",
+    "xsd-openml": "xmldom-decorators-cli xsd/openml.org/openml.data.upload.xsd > src/openml.org/reference.ts"
   },
   "bugs": {
     "url": "https://github.com/xinvoice/xmldom-decorators/issues"

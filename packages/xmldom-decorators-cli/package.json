@@ -18,7 +18,7 @@
     "lib"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && ./update_version.sh",
     "test": "jest",
     "dev": "ts-node ./src/index.ts"
   },
