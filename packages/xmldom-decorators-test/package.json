@@ -26,19 +26,5 @@
   "dependencies": {
     "@xinvoice/xmldom-decorators": "file:../xmldom-decorators",
     "@xinvoice/xmldom-decorators-cli": "file:../xmldom-decorators-cli"
-  },
-  "blerf": {
-    "coverageFrom": "../xmldom-decorators/lib",
-    "steps": [
-      {
-        "outPath": "lib/**/*.js",
-        "srcPath": [
-          "src/**/*.ts",
-          "tsconfig.json",
-          "package.json"
-        ],
-        "script": "tsc"
-      }
-    ]
   }
 }
