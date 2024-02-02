@@ -7,12 +7,12 @@
   "homepage": "https://github.com/xinvoice/xmldom-decorators",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xinvoice/xmldom-decorators.git"
+    "url": "https://github.com/xinvoice/xmldom-decorators/tree/master/packages/xmldom-decorators-cli"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "bin": {
-    "@xinvoice/xmldom-decorators-cli": "lib/index.js"
+    "xmldom-decorators-cli": "lib/index.js"
   },
   "files": [
     "lib"
