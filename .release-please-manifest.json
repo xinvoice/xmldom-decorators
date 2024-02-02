@@ -1,3 +1,5 @@
 {
-  ".": "1.1.0"
+  ".": "1.1.0",
+  "packages/xmldom-decorators": "1.1.0",
+  "packages/xmldom-decorators-cli": "1.1.0"
 }
