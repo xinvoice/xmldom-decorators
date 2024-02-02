@@ -1,12 +1,23 @@
 {
   "packages": {
-    ".": {
-      "changelog-path": "CHANGELOG.md",
-      "bump-minor-pre-major": false,
-      "bump-patch-for-minor-pre-major": false,
-      "draft": false,
-      "prerelease": false
+    "packages/xmldom-decorators": {
+      "component": "xmldom-decorators"
+    },
+    "packages/xmldom-decorators-cli": {
+      "component": "xmldom-decorators-cli"
     }
   },
+  "plugins": [
+    {
+      "type": "node-workspace",
+      "merge": false
+    },
+    {
+      "type": "linked-versions",
+      "group-name": "xmldom-decorators",
+      "groupName": "xmldom-decorators",
+      "components": ["xmldom-decorators", "xmldom-decorators-cli"]
+    }
+  ],
   "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
 }
