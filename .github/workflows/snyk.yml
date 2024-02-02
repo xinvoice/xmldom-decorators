@@ -1,5 +1,12 @@
 name: Scan for vulnerabilities with Snyk
-on: push
+
+# Declare default permissions as read only.
+permissions: read-all
+
+on:
+  push:
+    branches:
+      - master
 jobs:
   security:
     runs-on: ubuntu-latest
