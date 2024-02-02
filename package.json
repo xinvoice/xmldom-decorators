@@ -9,7 +9,7 @@
     "build:ci": "lerna run build --scope=@xinvoice/xmldom-*",
     "test": "lerna run test"
   },
-  "version": "1.0.5",
+  "version": "1.1.0",
   "workspaces": [
     "packages/xmldom-decorators-cli",
     "packages/xmldom-decorators-test",
