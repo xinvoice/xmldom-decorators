@@ -6,7 +6,6 @@
   },
   "scripts": {
     "build": "lerna run build",
-    "build:ci": "CI=true lerna run build",
     "test": "lerna run test"
   },
   "version": "1.1.0",

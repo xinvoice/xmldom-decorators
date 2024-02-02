@@ -18,8 +18,9 @@
     "lib"
   ],
   "scripts": {
-    "build": "tsc",
-    "test": "jest"
+    "build": "tsc && ./update_version.sh",
+    "test": "jest",
+    "dev": "ts-node ./src/index.ts"
   },
   "devDependencies": {
     "@types/jest": "^29.5.11",
@@ -29,7 +30,8 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "@xinvoice/xmldom-decorators": "1.1.0"
+    "@xinvoice/xmldom-decorators": "1.1.0",
+    "commander": "^11.1.0"
   },
   "jest": {
     "transform": {

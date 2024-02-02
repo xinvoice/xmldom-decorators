@@ -1,0 +1,2215 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to console 1`] = `
+[MockFunction] {
+  "calls": [
+    [
+      "import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+@XMLRoot({name: "TradeSettlementHeaderMonetarySummationType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class TradeSettlementHeaderMonetarySummationType {
+    @XMLElement({types: [{ name: "LineTotalAmount", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    lineTotalAmount: AmountType = new AmountType();
+
+    @XMLElement({types: [{ name: "ChargeTotalAmount", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    chargeTotalAmount?: AmountType;
+
+    @XMLElement({types: [{ name: "AllowanceTotalAmount", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    allowanceTotalAmount?: AmountType;
+
+    @XMLElement({types: [{ name: "TaxBasisTotalAmount", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    taxBasisTotalAmount: AmountType = new AmountType();
+
+    @XMLArray({nested: false, itemTypes: [{name: "TaxTotalAmount", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100", itemType: () => AmountType}]})
+    taxTotalAmount?: AmountType[];
+
+    @XMLElement({types: [{ name: "RoundingAmount", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    roundingAmount?: AmountType;
+
+    @XMLElement({types: [{ name: "GrandTotalAmount", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    grandTotalAmount: AmountType = new AmountType();
+
+    @XMLElement({types: [{ name: "TotalPrepaidAmount", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    totalPrepaidAmount?: AmountType;
+
+    @XMLElement({types: [{ name: "DuePayableAmount", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    duePayableAmount: AmountType = new AmountType();
+
+}
+
+@XMLRoot({name: "TradePaymentTermsType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class TradePaymentTermsType {
+    @XMLElement({types: [{ name: "Description", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    description?: TextType;
+
+    @XMLElement({types: [{ name: "DueDateDateTime", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    dueDateDateTime?: DateTimeType;
+
+    @XMLElement({types: [{ name: "DirectDebitMandateID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    directDebitMandateID?: IDType;
+
+}
+
+@XMLRoot({name: "CreditorFinancialInstitutionType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class CreditorFinancialInstitutionType {
+    @XMLElement({types: [{ name: "BICID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    bICID: IDType = new IDType();
+
+}
+
+@XMLRoot({name: "CreditorFinancialAccountType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class CreditorFinancialAccountType {
+    @XMLElement({types: [{ name: "IBANID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    iBANID?: IDType;
+
+    @XMLElement({types: [{ name: "AccountName", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    accountName?: TextType;
+
+    @XMLElement({types: [{ name: "ProprietaryID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    proprietaryID?: IDType;
+
+}
+
+@XMLRoot({name: "DebtorFinancialAccountType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class DebtorFinancialAccountType {
+    @XMLElement({types: [{ name: "IBANID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    iBANID: IDType = new IDType();
+
+}
+
+@XMLRoot({name: "TradeSettlementFinancialCardType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class TradeSettlementFinancialCardType {
+    @XMLElement({types: [{ name: "ID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    iD: IDType = new IDType();
+
+    @XMLElement({types: [{ name: "CardholderName", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    cardholderName?: TextType;
+
+}
+
+@XMLRoot({name: "PaymentMeansCodeType", namespaceUri: "urn:un:unece:uncefact:data:standard:QualifiedDataType:100"})
+export class PaymentMeansCodeType {
+    @XMLText()
+    value: string = "";
+
+}
+
+@XMLRoot({name: "TradeSettlementPaymentMeansType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class TradeSettlementPaymentMeansType {
+    @XMLElement({types: [{ name: "TypeCode", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    typeCode: PaymentMeansCodeType = new PaymentMeansCodeType();
+
+    @XMLElement({types: [{ name: "Information", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    information?: TextType;
+
+    @XMLElement({types: [{ name: "ApplicableTradeSettlementFinancialCard", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    applicableTradeSettlementFinancialCard?: TradeSettlementFinancialCardType;
+
+    @XMLElement({types: [{ name: "PayerPartyDebtorFinancialAccount", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    payerPartyDebtorFinancialAccount?: DebtorFinancialAccountType;
+
+    @XMLElement({types: [{ name: "PayeePartyCreditorFinancialAccount", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    payeePartyCreditorFinancialAccount?: CreditorFinancialAccountType;
+
+    @XMLElement({types: [{ name: "PayeeSpecifiedCreditorFinancialInstitution", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    payeeSpecifiedCreditorFinancialInstitution?: CreditorFinancialInstitutionType;
+
+}
+
+@XMLRoot({name: "CurrencyCodeType", namespaceUri: "urn:un:unece:uncefact:data:standard:QualifiedDataType:100"})
+export class CurrencyCodeType {
+    @XMLText()
+    value: string = "";
+
+}
+
+@XMLRoot({name: "HeaderTradeSettlementType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class HeaderTradeSettlementType {
+    @XMLElement({types: [{ name: "CreditorReferenceID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    creditorReferenceID?: IDType;
+
+    @XMLElement({types: [{ name: "PaymentReference", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    paymentReference?: TextType;
+
+    @XMLElement({types: [{ name: "TaxCurrencyCode", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    taxCurrencyCode?: CurrencyCodeType;
+
+    @XMLElement({types: [{ name: "InvoiceCurrencyCode", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    invoiceCurrencyCode: CurrencyCodeType = new CurrencyCodeType();
+
+    @XMLElement({types: [{ name: "PayeeTradeParty", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    payeeTradeParty?: TradePartyType;
+
+    @XMLArray({nested: false, itemTypes: [{name: "SpecifiedTradeSettlementPaymentMeans", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100", itemType: () => TradeSettlementPaymentMeansType}]})
+    specifiedTradeSettlementPaymentMeans?: TradeSettlementPaymentMeansType[];
+
+    @XMLArray({nested: false, itemTypes: [{name: "ApplicableTradeTax", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100", itemType: () => TradeTaxType}]})
+    applicableTradeTax: TradeTaxType[] = [];
+
+    @XMLElement({types: [{ name: "BillingSpecifiedPeriod", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    billingSpecifiedPeriod?: SpecifiedPeriodType;
+
+    @XMLArray({nested: false, itemTypes: [{name: "SpecifiedTradeAllowanceCharge", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100", itemType: () => TradeAllowanceChargeType}]})
+    specifiedTradeAllowanceCharge?: TradeAllowanceChargeType[];
+
+    @XMLElement({types: [{ name: "SpecifiedTradePaymentTerms", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    specifiedTradePaymentTerms?: TradePaymentTermsType;
+
+    @XMLElement({types: [{ name: "SpecifiedTradeSettlementHeaderMonetarySummation", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    specifiedTradeSettlementHeaderMonetarySummation: TradeSettlementHeaderMonetarySummationType = new TradeSettlementHeaderMonetarySummationType();
+
+    @XMLElement({types: [{ name: "InvoiceReferencedDocument", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    invoiceReferencedDocument?: ReferencedDocumentType;
+
+    @XMLElement({types: [{ name: "ReceivableSpecifiedTradeAccountingAccount", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    receivableSpecifiedTradeAccountingAccount?: TradeAccountingAccountType;
+
+}
+
+@XMLRoot({name: "SupplyChainEventType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class SupplyChainEventType {
+    @XMLElement({types: [{ name: "OccurrenceDateTime", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    occurrenceDateTime?: DateTimeType;
+
+}
+
+@XMLRoot({name: "HeaderTradeDeliveryType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class HeaderTradeDeliveryType {
+    @XMLElement({types: [{ name: "ShipToTradeParty", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    shipToTradeParty?: TradePartyType;
+
+    @XMLElement({types: [{ name: "ActualDeliverySupplyChainEvent", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    actualDeliverySupplyChainEvent?: SupplyChainEventType;
+
+    @XMLElement({types: [{ name: "DespatchAdviceReferencedDocument", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    despatchAdviceReferencedDocument?: ReferencedDocumentType;
+
+    @XMLElement({types: [{ name: "ReceivingAdviceReferencedDocument", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    receivingAdviceReferencedDocument?: ReferencedDocumentType;
+
+}
+
+@XMLRoot({name: "ProcuringProjectType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class ProcuringProjectType {
+    @XMLElement({types: [{ name: "ID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    iD: IDType = new IDType();
+
+    @XMLElement({types: [{ name: "Name", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    name: TextType = new TextType();
+
+}
+
+@XMLRoot({name: "TaxRegistrationType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class TaxRegistrationType {
+    @XMLElement({types: [{ name: "ID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    iD: IDType = new IDType();
+
+}
+
+@XMLRoot({name: "TradeAddressType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class TradeAddressType {
+    @XMLElement({types: [{ name: "PostcodeCode", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    postcodeCode?: CodeType;
+
+    @XMLElement({types: [{ name: "LineOne", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    lineOne?: TextType;
+
+    @XMLElement({types: [{ name: "LineTwo", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    lineTwo?: TextType;
+
+    @XMLElement({types: [{ name: "LineThree", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    lineThree?: TextType;
+
+    @XMLElement({types: [{ name: "CityName", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    cityName?: TextType;
+
+    @XMLElement({types: [{ name: "CountryID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    countryID: CountryIDType = new CountryIDType();
+
+    @XMLElement({types: [{ name: "CountrySubDivisionName", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    countrySubDivisionName?: TextType;
+
+}
+
+@XMLRoot({name: "UniversalCommunicationType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class UniversalCommunicationType {
+    @XMLElement({types: [{ name: "URIID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    uRIID?: IDType;
+
+    @XMLElement({types: [{ name: "CompleteNumber", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    completeNumber?: TextType;
+
+}
+
+@XMLRoot({name: "TradeContactType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class TradeContactType {
+    @XMLElement({types: [{ name: "PersonName", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    personName?: TextType;
+
+    @XMLElement({types: [{ name: "DepartmentName", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    departmentName?: TextType;
+
+    @XMLElement({types: [{ name: "TelephoneUniversalCommunication", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    telephoneUniversalCommunication?: UniversalCommunicationType;
+
+    @XMLElement({types: [{ name: "EmailURIUniversalCommunication", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    emailURIUniversalCommunication?: UniversalCommunicationType;
+
+}
+
+@XMLRoot({name: "LegalOrganizationType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class LegalOrganizationType {
+    @XMLElement({types: [{ name: "ID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    iD?: IDType;
+
+    @XMLElement({types: [{ name: "TradingBusinessName", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    tradingBusinessName?: TextType;
+
+}
+
+@XMLRoot({name: "TradePartyType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class TradePartyType {
+    @XMLArray({nested: false, itemTypes: [{name: "ID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100", itemType: () => IDType}]})
+    iD?: IDType[];
+
+    @XMLArray({nested: false, itemTypes: [{name: "GlobalID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100", itemType: () => IDType}]})
+    globalID?: IDType[];
+
+    @XMLElement({types: [{ name: "Name", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    name?: TextType;
+
+    @XMLElement({types: [{ name: "Description", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    description?: TextType;
+
+    @XMLElement({types: [{ name: "SpecifiedLegalOrganization", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    specifiedLegalOrganization?: LegalOrganizationType;
+
+    @XMLElement({types: [{ name: "DefinedTradeContact", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    definedTradeContact?: TradeContactType;
+
+    @XMLElement({types: [{ name: "PostalTradeAddress", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    postalTradeAddress?: TradeAddressType;
+
+    @XMLElement({types: [{ name: "URIUniversalCommunication", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    uRIUniversalCommunication?: UniversalCommunicationType;
+
+    @XMLArray({nested: false, itemTypes: [{name: "SpecifiedTaxRegistration", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100", itemType: () => TaxRegistrationType}]})
+    specifiedTaxRegistration?: TaxRegistrationType[];
+
+}
+
+@XMLRoot({name: "HeaderTradeAgreementType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class HeaderTradeAgreementType {
+    @XMLElement({types: [{ name: "BuyerReference", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    buyerReference?: TextType;
+
+    @XMLElement({types: [{ name: "SellerTradeParty", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    sellerTradeParty: TradePartyType = new TradePartyType();
+
+    @XMLElement({types: [{ name: "BuyerTradeParty", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    buyerTradeParty: TradePartyType = new TradePartyType();
+
+    @XMLElement({types: [{ name: "SellerTaxRepresentativeTradeParty", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    sellerTaxRepresentativeTradeParty?: TradePartyType;
+
+    @XMLElement({types: [{ name: "SellerOrderReferencedDocument", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    sellerOrderReferencedDocument?: ReferencedDocumentType;
+
+    @XMLElement({types: [{ name: "BuyerOrderReferencedDocument", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    buyerOrderReferencedDocument?: ReferencedDocumentType;
+
+    @XMLElement({types: [{ name: "ContractReferencedDocument", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    contractReferencedDocument?: ReferencedDocumentType;
+
+    @XMLArray({nested: false, itemTypes: [{name: "AdditionalReferencedDocument", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100", itemType: () => ReferencedDocumentType}]})
+    additionalReferencedDocument?: ReferencedDocumentType[];
+
+    @XMLElement({types: [{ name: "SpecifiedProcuringProject", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    specifiedProcuringProject?: ProcuringProjectType;
+
+}
+
+@XMLRoot({name: "TradeAccountingAccountType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class TradeAccountingAccountType {
+    @XMLElement({types: [{ name: "ID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    iD: IDType = new IDType();
+
+}
+
+@XMLRoot({name: "TradeSettlementLineMonetarySummationType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class TradeSettlementLineMonetarySummationType {
+    @XMLElement({types: [{ name: "LineTotalAmount", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    lineTotalAmount: AmountType = new AmountType();
+
+}
+
+@XMLRoot({name: "SpecifiedPeriodType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class SpecifiedPeriodType {
+    @XMLElement({types: [{ name: "StartDateTime", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    startDateTime?: DateTimeType;
+
+    @XMLElement({types: [{ name: "EndDateTime", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    endDateTime?: DateTimeType;
+
+}
+
+@XMLRoot({name: "LineTradeSettlementType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class LineTradeSettlementType {
+    @XMLElement({types: [{ name: "ApplicableTradeTax", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    applicableTradeTax: TradeTaxType = new TradeTaxType();
+
+    @XMLElement({types: [{ name: "BillingSpecifiedPeriod", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    billingSpecifiedPeriod?: SpecifiedPeriodType;
+
+    @XMLArray({nested: false, itemTypes: [{name: "SpecifiedTradeAllowanceCharge", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100", itemType: () => TradeAllowanceChargeType}]})
+    specifiedTradeAllowanceCharge?: TradeAllowanceChargeType[];
+
+    @XMLElement({types: [{ name: "SpecifiedTradeSettlementLineMonetarySummation", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    specifiedTradeSettlementLineMonetarySummation: TradeSettlementLineMonetarySummationType = new TradeSettlementLineMonetarySummationType();
+
+    @XMLElement({types: [{ name: "AdditionalReferencedDocument", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    additionalReferencedDocument?: ReferencedDocumentType;
+
+    @XMLElement({types: [{ name: "ReceivableSpecifiedTradeAccountingAccount", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    receivableSpecifiedTradeAccountingAccount?: TradeAccountingAccountType;
+
+}
+
+@XMLRoot({name: "LineTradeDeliveryType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class LineTradeDeliveryType {
+    @XMLElement({types: [{ name: "BilledQuantity", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    billedQuantity: QuantityType = new QuantityType();
+
+}
+
+@XMLRoot({name: "TimeReferenceCodeType", namespaceUri: "urn:un:unece:uncefact:data:standard:QualifiedDataType:100"})
+export class TimeReferenceCodeType {
+    @XMLText()
+    value: string = "";
+
+}
+
+@XMLRoot({name: "", namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+export class DateTypeDateString {
+    @XMLText()
+    value: string = "";
+
+    @XMLAttribute({namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+    format: string = "";
+
+}
+
+@XMLRoot({name: "DateType", namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+export class DateType {
+    @XMLElement({types: [{ name: "DateString", namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100" }]})
+    dateString: DateTypeDateString = new DateTypeDateString();
+
+}
+
+@XMLRoot({name: "TaxCategoryCodeType", namespaceUri: "urn:un:unece:uncefact:data:standard:QualifiedDataType:100"})
+export class TaxCategoryCodeType {
+    @XMLText()
+    value: string = "";
+
+}
+
+@XMLRoot({name: "TaxTypeCodeType", namespaceUri: "urn:un:unece:uncefact:data:standard:QualifiedDataType:100"})
+export class TaxTypeCodeType {
+    @XMLText()
+    value: string = "";
+
+}
+
+@XMLRoot({name: "TradeTaxType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class TradeTaxType {
+    @XMLElement({types: [{ name: "CalculatedAmount", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    calculatedAmount?: AmountType;
+
+    @XMLElement({types: [{ name: "TypeCode", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    typeCode: TaxTypeCodeType = new TaxTypeCodeType();
+
+    @XMLElement({types: [{ name: "ExemptionReason", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    exemptionReason?: TextType;
+
+    @XMLElement({types: [{ name: "BasisAmount", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    basisAmount?: AmountType;
+
+    @XMLElement({types: [{ name: "CategoryCode", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    categoryCode: TaxCategoryCodeType = new TaxCategoryCodeType();
+
+    @XMLElement({types: [{ name: "ExemptionReasonCode", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    exemptionReasonCode?: CodeType;
+
+    @XMLElement({types: [{ name: "TaxPointDate", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    taxPointDate?: DateType;
+
+    @XMLElement({types: [{ name: "DueDateTypeCode", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    dueDateTypeCode?: TimeReferenceCodeType;
+
+    @XMLElement({types: [{ name: "RateApplicablePercent", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    rateApplicablePercent?: PercentType;
+
+}
+
+@XMLRoot({name: "AllowanceChargeReasonCodeType", namespaceUri: "urn:un:unece:uncefact:data:standard:QualifiedDataType:100"})
+export class AllowanceChargeReasonCodeType {
+    @XMLText()
+    value: string = "";
+
+}
+
+@XMLRoot({name: "PercentType", namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+export class PercentType {
+    @XMLText()
+    value: number = 0;
+
+}
+
+@XMLRoot({name: "IndicatorType", namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+export class IndicatorType {
+    @XMLElement({types: [{ name: "Indicator", namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100" }]})
+    indicator: boolean = false;
+
+}
+
+@XMLRoot({name: "TradeAllowanceChargeType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class TradeAllowanceChargeType {
+    @XMLElement({types: [{ name: "ChargeIndicator", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    chargeIndicator?: IndicatorType;
+
+    @XMLElement({types: [{ name: "CalculationPercent", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    calculationPercent?: PercentType;
+
+    @XMLElement({types: [{ name: "BasisAmount", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    basisAmount?: AmountType;
+
+    @XMLElement({types: [{ name: "ActualAmount", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    actualAmount: AmountType = new AmountType();
+
+    @XMLElement({types: [{ name: "ReasonCode", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    reasonCode?: AllowanceChargeReasonCodeType;
+
+    @XMLElement({types: [{ name: "Reason", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    reason?: TextType;
+
+    @XMLElement({types: [{ name: "CategoryTradeTax", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    categoryTradeTax?: TradeTaxType;
+
+}
+
+@XMLRoot({name: "QuantityType", namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+export class QuantityType {
+    @XMLText()
+    value: number = 0;
+
+    @XMLAttribute({namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+    unitCode: string = "";
+
+}
+
+@XMLRoot({name: "AmountType", namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+export class AmountType {
+    @XMLText()
+    value: number = 0;
+
+    @XMLAttribute({namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+    currencyID?: string = undefined;
+
+}
+
+@XMLRoot({name: "TradePriceType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class TradePriceType {
+    @XMLElement({types: [{ name: "ChargeAmount", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    chargeAmount: AmountType = new AmountType();
+
+    @XMLElement({types: [{ name: "BasisQuantity", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    basisQuantity?: QuantityType;
+
+    @XMLElement({types: [{ name: "AppliedTradeAllowanceCharge", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    appliedTradeAllowanceCharge?: TradeAllowanceChargeType;
+
+}
+
+@XMLRoot({name: "", namespaceUri: "urn:un:unece:uncefact:data:standard:QualifiedDataType:100"})
+export class FormattedDateTimeTypeDateTimeString {
+    @XMLText()
+    value: string = "";
+
+    @XMLAttribute({namespaceUri: "urn:un:unece:uncefact:data:standard:QualifiedDataType:100"})
+    format: string = "";
+
+}
+
+@XMLRoot({name: "FormattedDateTimeType", namespaceUri: "urn:un:unece:uncefact:data:standard:QualifiedDataType:100"})
+export class FormattedDateTimeType {
+    @XMLElement({types: [{ name: "DateTimeString", namespaceUri: "urn:un:unece:uncefact:data:standard:QualifiedDataType:100" }]})
+    dateTimeString: FormattedDateTimeTypeDateTimeString = new FormattedDateTimeTypeDateTimeString();
+
+}
+
+@XMLRoot({name: "ReferenceCodeType", namespaceUri: "urn:un:unece:uncefact:data:standard:QualifiedDataType:100"})
+export class ReferenceCodeType {
+    @XMLText()
+    value: string = "";
+
+}
+
+@XMLRoot({name: "BinaryObjectType", namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+export class BinaryObjectType {
+    @XMLText()
+    value: string = "";
+
+    @XMLAttribute({namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+    mimeCode: string = "";
+
+    @XMLAttribute({namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+    filename: string = "";
+
+}
+
+@XMLRoot({name: "ReferencedDocumentType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class ReferencedDocumentType {
+    @XMLElement({types: [{ name: "IssuerAssignedID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    issuerAssignedID?: IDType;
+
+    @XMLElement({types: [{ name: "URIID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    uRIID?: IDType;
+
+    @XMLElement({types: [{ name: "LineID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    lineID?: IDType;
+
+    @XMLElement({types: [{ name: "TypeCode", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    typeCode?: DocumentCodeType;
+
+    @XMLElement({types: [{ name: "Name", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    name?: TextType;
+
+    @XMLElement({types: [{ name: "AttachmentBinaryObject", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    attachmentBinaryObject?: BinaryObjectType;
+
+    @XMLElement({types: [{ name: "ReferenceTypeCode", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    referenceTypeCode?: ReferenceCodeType;
+
+    @XMLElement({types: [{ name: "FormattedIssueDateTime", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    formattedIssueDateTime?: FormattedDateTimeType;
+
+}
+
+@XMLRoot({name: "LineTradeAgreementType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class LineTradeAgreementType {
+    @XMLElement({types: [{ name: "BuyerOrderReferencedDocument", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    buyerOrderReferencedDocument?: ReferencedDocumentType;
+
+    @XMLElement({types: [{ name: "GrossPriceProductTradePrice", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    grossPriceProductTradePrice?: TradePriceType;
+
+    @XMLElement({types: [{ name: "NetPriceProductTradePrice", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    netPriceProductTradePrice: TradePriceType = new TradePriceType();
+
+}
+
+@XMLRoot({name: "CountryIDType", namespaceUri: "urn:un:unece:uncefact:data:standard:QualifiedDataType:100"})
+export class CountryIDType {
+    @XMLText()
+    value: string = "";
+
+}
+
+@XMLRoot({name: "TradeCountryType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class TradeCountryType {
+    @XMLElement({types: [{ name: "ID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    iD: CountryIDType = new CountryIDType();
+
+}
+
+@XMLRoot({name: "ProductClassificationType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class ProductClassificationType {
+    @XMLElement({types: [{ name: "ClassCode", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    classCode: CodeType = new CodeType();
+
+}
+
+@XMLRoot({name: "ProductCharacteristicType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class ProductCharacteristicType {
+    @XMLElement({types: [{ name: "Description", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    description: TextType = new TextType();
+
+    @XMLElement({types: [{ name: "Value", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    value: TextType = new TextType();
+
+}
+
+@XMLRoot({name: "TradeProductType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class TradeProductType {
+    @XMLElement({types: [{ name: "GlobalID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    globalID?: IDType;
+
+    @XMLElement({types: [{ name: "SellerAssignedID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    sellerAssignedID?: IDType;
+
+    @XMLElement({types: [{ name: "BuyerAssignedID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    buyerAssignedID?: IDType;
+
+    @XMLElement({types: [{ name: "Name", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    name: TextType = new TextType();
+
+    @XMLElement({types: [{ name: "Description", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    description?: TextType;
+
+    @XMLArray({nested: false, itemTypes: [{name: "ApplicableProductCharacteristic", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100", itemType: () => ProductCharacteristicType}]})
+    applicableProductCharacteristic?: ProductCharacteristicType[];
+
+    @XMLArray({nested: false, itemTypes: [{name: "DesignatedProductClassification", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100", itemType: () => ProductClassificationType}]})
+    designatedProductClassification?: ProductClassificationType[];
+
+    @XMLElement({types: [{ name: "OriginTradeCountry", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    originTradeCountry?: TradeCountryType;
+
+}
+
+@XMLRoot({name: "DocumentLineDocumentType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class DocumentLineDocumentType {
+    @XMLElement({types: [{ name: "LineID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    lineID: IDType = new IDType();
+
+    @XMLElement({types: [{ name: "IncludedNote", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    includedNote?: NoteType;
+
+}
+
+@XMLRoot({name: "SupplyChainTradeLineItemType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class SupplyChainTradeLineItemType {
+    @XMLElement({types: [{ name: "AssociatedDocumentLineDocument", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    associatedDocumentLineDocument: DocumentLineDocumentType = new DocumentLineDocumentType();
+
+    @XMLElement({types: [{ name: "SpecifiedTradeProduct", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    specifiedTradeProduct: TradeProductType = new TradeProductType();
+
+    @XMLElement({types: [{ name: "SpecifiedLineTradeAgreement", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    specifiedLineTradeAgreement: LineTradeAgreementType = new LineTradeAgreementType();
+
+    @XMLElement({types: [{ name: "SpecifiedLineTradeDelivery", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    specifiedLineTradeDelivery?: LineTradeDeliveryType;
+
+    @XMLElement({types: [{ name: "SpecifiedLineTradeSettlement", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    specifiedLineTradeSettlement: LineTradeSettlementType = new LineTradeSettlementType();
+
+}
+
+@XMLRoot({name: "SupplyChainTradeTransactionType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class SupplyChainTradeTransactionType {
+    @XMLArray({nested: false, itemTypes: [{name: "IncludedSupplyChainTradeLineItem", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100", itemType: () => SupplyChainTradeLineItemType}]})
+    includedSupplyChainTradeLineItem: SupplyChainTradeLineItemType[] = [];
+
+    @XMLElement({types: [{ name: "ApplicableHeaderTradeAgreement", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    applicableHeaderTradeAgreement: HeaderTradeAgreementType = new HeaderTradeAgreementType();
+
+    @XMLElement({types: [{ name: "ApplicableHeaderTradeDelivery", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    applicableHeaderTradeDelivery: HeaderTradeDeliveryType = new HeaderTradeDeliveryType();
+
+    @XMLElement({types: [{ name: "ApplicableHeaderTradeSettlement", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    applicableHeaderTradeSettlement: HeaderTradeSettlementType = new HeaderTradeSettlementType();
+
+}
+
+@XMLRoot({name: "CodeType", namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+export class CodeType {
+    @XMLText()
+    value: string = "";
+
+    @XMLAttribute({namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+    listID?: string = undefined;
+
+    @XMLAttribute({namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+    listVersionID?: string = undefined;
+
+}
+
+@XMLRoot({name: "TextType", namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+export class TextType {
+    @XMLText()
+    value: string = "";
+
+}
+
+@XMLRoot({name: "NoteType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class NoteType {
+    @XMLElement({types: [{ name: "Content", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    content: TextType = new TextType();
+
+    @XMLElement({types: [{ name: "SubjectCode", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    subjectCode?: CodeType;
+
+}
+
+@XMLRoot({name: "", namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+export class DateTimeTypeDateTimeString {
+    @XMLText()
+    value: string = "";
+
+    @XMLAttribute({namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+    format: string = "";
+
+}
+
+@XMLRoot({name: "DateTimeType", namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+export class DateTimeType {
+    @XMLElement({types: [{ name: "DateTimeString", namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100" }]})
+    dateTimeString: DateTimeTypeDateTimeString = new DateTimeTypeDateTimeString();
+
+}
+
+@XMLRoot({name: "DocumentCodeType", namespaceUri: "urn:un:unece:uncefact:data:standard:QualifiedDataType:100"})
+export class DocumentCodeType {
+    @XMLText()
+    value: string = "";
+
+}
+
+@XMLRoot({name: "ExchangedDocumentType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class ExchangedDocumentType {
+    @XMLElement({types: [{ name: "ID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    iD: IDType = new IDType();
+
+    @XMLElement({types: [{ name: "TypeCode", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    typeCode: DocumentCodeType = new DocumentCodeType();
+
+    @XMLElement({types: [{ name: "IssueDateTime", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    issueDateTime: DateTimeType = new DateTimeType();
+
+    @XMLArray({nested: false, itemTypes: [{name: "IncludedNote", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100", itemType: () => NoteType}]})
+    includedNote?: NoteType[];
+
+}
+
+@XMLRoot({name: "IDType", namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+export class IDType {
+    @XMLText()
+    value: string = "";
+
+    @XMLAttribute({namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+    schemeID?: string = undefined;
+
+}
+
+@XMLRoot({name: "DocumentContextParameterType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class DocumentContextParameterType {
+    @XMLElement({types: [{ name: "ID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    iD?: IDType;
+
+}
+
+@XMLRoot({name: "ExchangedDocumentContextType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class ExchangedDocumentContextType {
+    @XMLElement({types: [{ name: "BusinessProcessSpecifiedDocumentContextParameter", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    businessProcessSpecifiedDocumentContextParameter?: DocumentContextParameterType;
+
+    @XMLElement({types: [{ name: "GuidelineSpecifiedDocumentContextParameter", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    guidelineSpecifiedDocumentContextParameter: DocumentContextParameterType = new DocumentContextParameterType();
+
+}
+
+@XMLRoot({name: "CrossIndustryInvoice", namespaceUri: "urn:un:unece:uncefact:data:standard:CrossIndustryInvoice:100"})
+export class CrossIndustryInvoice {
+    @XMLElement({types: [{ name: "ExchangedDocumentContext", namespaceUri: "urn:un:unece:uncefact:data:standard:CrossIndustryInvoice:100" }]})
+    exchangedDocumentContext: ExchangedDocumentContextType = new ExchangedDocumentContextType();
+
+    @XMLElement({types: [{ name: "ExchangedDocument", namespaceUri: "urn:un:unece:uncefact:data:standard:CrossIndustryInvoice:100" }]})
+    exchangedDocument: ExchangedDocumentType = new ExchangedDocumentType();
+
+    @XMLElement({types: [{ name: "SupplyChainTradeTransaction", namespaceUri: "urn:un:unece:uncefact:data:standard:CrossIndustryInvoice:100" }]})
+    supplyChainTradeTransaction: SupplyChainTradeTransactionType = new SupplyChainTradeTransactionType();
+
+}
+
+",
+    ],
+  ],
+  "results": [
+    {
+      "type": "return",
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: AllowanceChargeReasonCodeType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+
+@XMLRoot({name: "AllowanceChargeReasonCodeType", namespaceUri: "urn:un:unece:uncefact:data:standard:QualifiedDataType:100"})
+export class AllowanceChargeReasonCodeType {
+    @XMLText()
+    value: string = "";
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: AmountType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+
+@XMLRoot({name: "AmountType", namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+export class AmountType {
+    @XMLText()
+    value: number = 0;
+
+    @XMLAttribute({namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+    currencyID?: string = undefined;
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: BinaryObjectType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+
+@XMLRoot({name: "BinaryObjectType", namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+export class BinaryObjectType {
+    @XMLText()
+    value: string = "";
+
+    @XMLAttribute({namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+    mimeCode: string = "";
+
+    @XMLAttribute({namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+    filename: string = "";
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: CodeType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+
+@XMLRoot({name: "CodeType", namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+export class CodeType {
+    @XMLText()
+    value: string = "";
+
+    @XMLAttribute({namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+    listID?: string = undefined;
+
+    @XMLAttribute({namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+    listVersionID?: string = undefined;
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: CountryIDType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+
+@XMLRoot({name: "CountryIDType", namespaceUri: "urn:un:unece:uncefact:data:standard:QualifiedDataType:100"})
+export class CountryIDType {
+    @XMLText()
+    value: string = "";
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: CreditorFinancialAccountType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { IDType } from "./IDType";
+import { TextType } from "./TextType";
+
+@XMLRoot({name: "CreditorFinancialAccountType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class CreditorFinancialAccountType {
+    @XMLElement({types: [{ name: "IBANID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    iBANID?: IDType;
+
+    @XMLElement({types: [{ name: "AccountName", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    accountName?: TextType;
+
+    @XMLElement({types: [{ name: "ProprietaryID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    proprietaryID?: IDType;
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: CreditorFinancialInstitutionType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { IDType } from "./IDType";
+
+@XMLRoot({name: "CreditorFinancialInstitutionType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class CreditorFinancialInstitutionType {
+    @XMLElement({types: [{ name: "BICID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    bICID: IDType = new IDType();
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: CrossIndustryInvoice.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { ExchangedDocumentContextType } from "./ExchangedDocumentContextType";
+import { ExchangedDocumentType } from "./ExchangedDocumentType";
+import { SupplyChainTradeTransactionType } from "./SupplyChainTradeTransactionType";
+
+@XMLRoot({name: "CrossIndustryInvoice", namespaceUri: "urn:un:unece:uncefact:data:standard:CrossIndustryInvoice:100"})
+export class CrossIndustryInvoice {
+    @XMLElement({types: [{ name: "ExchangedDocumentContext", namespaceUri: "urn:un:unece:uncefact:data:standard:CrossIndustryInvoice:100" }]})
+    exchangedDocumentContext: ExchangedDocumentContextType = new ExchangedDocumentContextType();
+
+    @XMLElement({types: [{ name: "ExchangedDocument", namespaceUri: "urn:un:unece:uncefact:data:standard:CrossIndustryInvoice:100" }]})
+    exchangedDocument: ExchangedDocumentType = new ExchangedDocumentType();
+
+    @XMLElement({types: [{ name: "SupplyChainTradeTransaction", namespaceUri: "urn:un:unece:uncefact:data:standard:CrossIndustryInvoice:100" }]})
+    supplyChainTradeTransaction: SupplyChainTradeTransactionType = new SupplyChainTradeTransactionType();
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: CurrencyCodeType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+
+@XMLRoot({name: "CurrencyCodeType", namespaceUri: "urn:un:unece:uncefact:data:standard:QualifiedDataType:100"})
+export class CurrencyCodeType {
+    @XMLText()
+    value: string = "";
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: DateTimeType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { DateTimeTypeDateTimeString } from "./DateTimeTypeDateTimeString";
+
+@XMLRoot({name: "DateTimeType", namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+export class DateTimeType {
+    @XMLElement({types: [{ name: "DateTimeString", namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100" }]})
+    dateTimeString: DateTimeTypeDateTimeString = new DateTimeTypeDateTimeString();
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: DateTimeTypeDateTimeString.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+
+@XMLRoot({name: "", namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+export class DateTimeTypeDateTimeString {
+    @XMLText()
+    value: string = "";
+
+    @XMLAttribute({namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+    format: string = "";
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: DateType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { DateTypeDateString } from "./DateTypeDateString";
+
+@XMLRoot({name: "DateType", namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+export class DateType {
+    @XMLElement({types: [{ name: "DateString", namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100" }]})
+    dateString: DateTypeDateString = new DateTypeDateString();
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: DateTypeDateString.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+
+@XMLRoot({name: "", namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+export class DateTypeDateString {
+    @XMLText()
+    value: string = "";
+
+    @XMLAttribute({namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+    format: string = "";
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: DebtorFinancialAccountType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { IDType } from "./IDType";
+
+@XMLRoot({name: "DebtorFinancialAccountType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class DebtorFinancialAccountType {
+    @XMLElement({types: [{ name: "IBANID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    iBANID: IDType = new IDType();
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: DocumentCodeType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+
+@XMLRoot({name: "DocumentCodeType", namespaceUri: "urn:un:unece:uncefact:data:standard:QualifiedDataType:100"})
+export class DocumentCodeType {
+    @XMLText()
+    value: string = "";
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: DocumentContextParameterType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { IDType } from "./IDType";
+
+@XMLRoot({name: "DocumentContextParameterType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class DocumentContextParameterType {
+    @XMLElement({types: [{ name: "ID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    iD?: IDType;
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: DocumentLineDocumentType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { IDType } from "./IDType";
+import { NoteType } from "./NoteType";
+
+@XMLRoot({name: "DocumentLineDocumentType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class DocumentLineDocumentType {
+    @XMLElement({types: [{ name: "LineID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    lineID: IDType = new IDType();
+
+    @XMLElement({types: [{ name: "IncludedNote", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    includedNote?: NoteType;
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: ExchangedDocumentContextType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { DocumentContextParameterType } from "./DocumentContextParameterType";
+
+@XMLRoot({name: "ExchangedDocumentContextType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class ExchangedDocumentContextType {
+    @XMLElement({types: [{ name: "BusinessProcessSpecifiedDocumentContextParameter", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    businessProcessSpecifiedDocumentContextParameter?: DocumentContextParameterType;
+
+    @XMLElement({types: [{ name: "GuidelineSpecifiedDocumentContextParameter", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    guidelineSpecifiedDocumentContextParameter: DocumentContextParameterType = new DocumentContextParameterType();
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: ExchangedDocumentType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { DateTimeType } from "./DateTimeType";
+import { DocumentCodeType } from "./DocumentCodeType";
+import { IDType } from "./IDType";
+import { NoteType } from "./NoteType";
+
+@XMLRoot({name: "ExchangedDocumentType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class ExchangedDocumentType {
+    @XMLElement({types: [{ name: "ID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    iD: IDType = new IDType();
+
+    @XMLElement({types: [{ name: "TypeCode", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    typeCode: DocumentCodeType = new DocumentCodeType();
+
+    @XMLElement({types: [{ name: "IssueDateTime", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    issueDateTime: DateTimeType = new DateTimeType();
+
+    @XMLArray({nested: false, itemTypes: [{name: "IncludedNote", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100", itemType: () => NoteType}]})
+    includedNote?: NoteType[];
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: FormattedDateTimeType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { FormattedDateTimeTypeDateTimeString } from "./FormattedDateTimeTypeDateTimeString";
+
+@XMLRoot({name: "FormattedDateTimeType", namespaceUri: "urn:un:unece:uncefact:data:standard:QualifiedDataType:100"})
+export class FormattedDateTimeType {
+    @XMLElement({types: [{ name: "DateTimeString", namespaceUri: "urn:un:unece:uncefact:data:standard:QualifiedDataType:100" }]})
+    dateTimeString: FormattedDateTimeTypeDateTimeString = new FormattedDateTimeTypeDateTimeString();
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: FormattedDateTimeTypeDateTimeString.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+
+@XMLRoot({name: "", namespaceUri: "urn:un:unece:uncefact:data:standard:QualifiedDataType:100"})
+export class FormattedDateTimeTypeDateTimeString {
+    @XMLText()
+    value: string = "";
+
+    @XMLAttribute({namespaceUri: "urn:un:unece:uncefact:data:standard:QualifiedDataType:100"})
+    format: string = "";
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: HeaderTradeAgreementType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { ProcuringProjectType } from "./ProcuringProjectType";
+import { ReferencedDocumentType } from "./ReferencedDocumentType";
+import { TextType } from "./TextType";
+import { TradePartyType } from "./TradePartyType";
+
+@XMLRoot({name: "HeaderTradeAgreementType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class HeaderTradeAgreementType {
+    @XMLElement({types: [{ name: "BuyerReference", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    buyerReference?: TextType;
+
+    @XMLElement({types: [{ name: "SellerTradeParty", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    sellerTradeParty: TradePartyType = new TradePartyType();
+
+    @XMLElement({types: [{ name: "BuyerTradeParty", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    buyerTradeParty: TradePartyType = new TradePartyType();
+
+    @XMLElement({types: [{ name: "SellerTaxRepresentativeTradeParty", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    sellerTaxRepresentativeTradeParty?: TradePartyType;
+
+    @XMLElement({types: [{ name: "SellerOrderReferencedDocument", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    sellerOrderReferencedDocument?: ReferencedDocumentType;
+
+    @XMLElement({types: [{ name: "BuyerOrderReferencedDocument", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    buyerOrderReferencedDocument?: ReferencedDocumentType;
+
+    @XMLElement({types: [{ name: "ContractReferencedDocument", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    contractReferencedDocument?: ReferencedDocumentType;
+
+    @XMLArray({nested: false, itemTypes: [{name: "AdditionalReferencedDocument", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100", itemType: () => ReferencedDocumentType}]})
+    additionalReferencedDocument?: ReferencedDocumentType[];
+
+    @XMLElement({types: [{ name: "SpecifiedProcuringProject", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    specifiedProcuringProject?: ProcuringProjectType;
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: HeaderTradeDeliveryType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { ReferencedDocumentType } from "./ReferencedDocumentType";
+import { SupplyChainEventType } from "./SupplyChainEventType";
+import { TradePartyType } from "./TradePartyType";
+
+@XMLRoot({name: "HeaderTradeDeliveryType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class HeaderTradeDeliveryType {
+    @XMLElement({types: [{ name: "ShipToTradeParty", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    shipToTradeParty?: TradePartyType;
+
+    @XMLElement({types: [{ name: "ActualDeliverySupplyChainEvent", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    actualDeliverySupplyChainEvent?: SupplyChainEventType;
+
+    @XMLElement({types: [{ name: "DespatchAdviceReferencedDocument", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    despatchAdviceReferencedDocument?: ReferencedDocumentType;
+
+    @XMLElement({types: [{ name: "ReceivingAdviceReferencedDocument", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    receivingAdviceReferencedDocument?: ReferencedDocumentType;
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: HeaderTradeSettlementType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { CurrencyCodeType } from "./CurrencyCodeType";
+import { IDType } from "./IDType";
+import { ReferencedDocumentType } from "./ReferencedDocumentType";
+import { SpecifiedPeriodType } from "./SpecifiedPeriodType";
+import { TextType } from "./TextType";
+import { TradeAccountingAccountType } from "./TradeAccountingAccountType";
+import { TradeAllowanceChargeType } from "./TradeAllowanceChargeType";
+import { TradePartyType } from "./TradePartyType";
+import { TradePaymentTermsType } from "./TradePaymentTermsType";
+import { TradeSettlementHeaderMonetarySummationType } from "./TradeSettlementHeaderMonetarySummationType";
+import { TradeSettlementPaymentMeansType } from "./TradeSettlementPaymentMeansType";
+import { TradeTaxType } from "./TradeTaxType";
+
+@XMLRoot({name: "HeaderTradeSettlementType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class HeaderTradeSettlementType {
+    @XMLElement({types: [{ name: "CreditorReferenceID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    creditorReferenceID?: IDType;
+
+    @XMLElement({types: [{ name: "PaymentReference", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    paymentReference?: TextType;
+
+    @XMLElement({types: [{ name: "TaxCurrencyCode", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    taxCurrencyCode?: CurrencyCodeType;
+
+    @XMLElement({types: [{ name: "InvoiceCurrencyCode", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    invoiceCurrencyCode: CurrencyCodeType = new CurrencyCodeType();
+
+    @XMLElement({types: [{ name: "PayeeTradeParty", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    payeeTradeParty?: TradePartyType;
+
+    @XMLArray({nested: false, itemTypes: [{name: "SpecifiedTradeSettlementPaymentMeans", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100", itemType: () => TradeSettlementPaymentMeansType}]})
+    specifiedTradeSettlementPaymentMeans?: TradeSettlementPaymentMeansType[];
+
+    @XMLArray({nested: false, itemTypes: [{name: "ApplicableTradeTax", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100", itemType: () => TradeTaxType}]})
+    applicableTradeTax: TradeTaxType[] = [];
+
+    @XMLElement({types: [{ name: "BillingSpecifiedPeriod", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    billingSpecifiedPeriod?: SpecifiedPeriodType;
+
+    @XMLArray({nested: false, itemTypes: [{name: "SpecifiedTradeAllowanceCharge", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100", itemType: () => TradeAllowanceChargeType}]})
+    specifiedTradeAllowanceCharge?: TradeAllowanceChargeType[];
+
+    @XMLElement({types: [{ name: "SpecifiedTradePaymentTerms", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    specifiedTradePaymentTerms?: TradePaymentTermsType;
+
+    @XMLElement({types: [{ name: "SpecifiedTradeSettlementHeaderMonetarySummation", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    specifiedTradeSettlementHeaderMonetarySummation: TradeSettlementHeaderMonetarySummationType = new TradeSettlementHeaderMonetarySummationType();
+
+    @XMLElement({types: [{ name: "InvoiceReferencedDocument", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    invoiceReferencedDocument?: ReferencedDocumentType;
+
+    @XMLElement({types: [{ name: "ReceivableSpecifiedTradeAccountingAccount", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    receivableSpecifiedTradeAccountingAccount?: TradeAccountingAccountType;
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: IDType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+
+@XMLRoot({name: "IDType", namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+export class IDType {
+    @XMLText()
+    value: string = "";
+
+    @XMLAttribute({namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+    schemeID?: string = undefined;
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: IndicatorType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+
+@XMLRoot({name: "IndicatorType", namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+export class IndicatorType {
+    @XMLElement({types: [{ name: "Indicator", namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100" }]})
+    indicator: boolean = false;
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: LegalOrganizationType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { IDType } from "./IDType";
+import { TextType } from "./TextType";
+
+@XMLRoot({name: "LegalOrganizationType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class LegalOrganizationType {
+    @XMLElement({types: [{ name: "ID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    iD?: IDType;
+
+    @XMLElement({types: [{ name: "TradingBusinessName", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    tradingBusinessName?: TextType;
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: LineTradeAgreementType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { ReferencedDocumentType } from "./ReferencedDocumentType";
+import { TradePriceType } from "./TradePriceType";
+
+@XMLRoot({name: "LineTradeAgreementType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class LineTradeAgreementType {
+    @XMLElement({types: [{ name: "BuyerOrderReferencedDocument", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    buyerOrderReferencedDocument?: ReferencedDocumentType;
+
+    @XMLElement({types: [{ name: "GrossPriceProductTradePrice", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    grossPriceProductTradePrice?: TradePriceType;
+
+    @XMLElement({types: [{ name: "NetPriceProductTradePrice", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    netPriceProductTradePrice: TradePriceType = new TradePriceType();
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: LineTradeDeliveryType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { QuantityType } from "./QuantityType";
+
+@XMLRoot({name: "LineTradeDeliveryType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class LineTradeDeliveryType {
+    @XMLElement({types: [{ name: "BilledQuantity", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    billedQuantity: QuantityType = new QuantityType();
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: LineTradeSettlementType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { ReferencedDocumentType } from "./ReferencedDocumentType";
+import { SpecifiedPeriodType } from "./SpecifiedPeriodType";
+import { TradeAccountingAccountType } from "./TradeAccountingAccountType";
+import { TradeAllowanceChargeType } from "./TradeAllowanceChargeType";
+import { TradeSettlementLineMonetarySummationType } from "./TradeSettlementLineMonetarySummationType";
+import { TradeTaxType } from "./TradeTaxType";
+
+@XMLRoot({name: "LineTradeSettlementType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class LineTradeSettlementType {
+    @XMLElement({types: [{ name: "ApplicableTradeTax", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    applicableTradeTax: TradeTaxType = new TradeTaxType();
+
+    @XMLElement({types: [{ name: "BillingSpecifiedPeriod", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    billingSpecifiedPeriod?: SpecifiedPeriodType;
+
+    @XMLArray({nested: false, itemTypes: [{name: "SpecifiedTradeAllowanceCharge", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100", itemType: () => TradeAllowanceChargeType}]})
+    specifiedTradeAllowanceCharge?: TradeAllowanceChargeType[];
+
+    @XMLElement({types: [{ name: "SpecifiedTradeSettlementLineMonetarySummation", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    specifiedTradeSettlementLineMonetarySummation: TradeSettlementLineMonetarySummationType = new TradeSettlementLineMonetarySummationType();
+
+    @XMLElement({types: [{ name: "AdditionalReferencedDocument", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    additionalReferencedDocument?: ReferencedDocumentType;
+
+    @XMLElement({types: [{ name: "ReceivableSpecifiedTradeAccountingAccount", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    receivableSpecifiedTradeAccountingAccount?: TradeAccountingAccountType;
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: NoteType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { CodeType } from "./CodeType";
+import { TextType } from "./TextType";
+
+@XMLRoot({name: "NoteType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class NoteType {
+    @XMLElement({types: [{ name: "Content", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    content: TextType = new TextType();
+
+    @XMLElement({types: [{ name: "SubjectCode", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    subjectCode?: CodeType;
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: PaymentMeansCodeType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+
+@XMLRoot({name: "PaymentMeansCodeType", namespaceUri: "urn:un:unece:uncefact:data:standard:QualifiedDataType:100"})
+export class PaymentMeansCodeType {
+    @XMLText()
+    value: string = "";
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: PercentType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+
+@XMLRoot({name: "PercentType", namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+export class PercentType {
+    @XMLText()
+    value: number = 0;
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: ProcuringProjectType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { IDType } from "./IDType";
+import { TextType } from "./TextType";
+
+@XMLRoot({name: "ProcuringProjectType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class ProcuringProjectType {
+    @XMLElement({types: [{ name: "ID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    iD: IDType = new IDType();
+
+    @XMLElement({types: [{ name: "Name", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    name: TextType = new TextType();
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: ProductCharacteristicType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { TextType } from "./TextType";
+
+@XMLRoot({name: "ProductCharacteristicType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class ProductCharacteristicType {
+    @XMLElement({types: [{ name: "Description", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    description: TextType = new TextType();
+
+    @XMLElement({types: [{ name: "Value", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    value: TextType = new TextType();
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: ProductClassificationType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { CodeType } from "./CodeType";
+
+@XMLRoot({name: "ProductClassificationType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class ProductClassificationType {
+    @XMLElement({types: [{ name: "ClassCode", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    classCode: CodeType = new CodeType();
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: QuantityType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+
+@XMLRoot({name: "QuantityType", namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+export class QuantityType {
+    @XMLText()
+    value: number = 0;
+
+    @XMLAttribute({namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+    unitCode: string = "";
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: ReferenceCodeType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+
+@XMLRoot({name: "ReferenceCodeType", namespaceUri: "urn:un:unece:uncefact:data:standard:QualifiedDataType:100"})
+export class ReferenceCodeType {
+    @XMLText()
+    value: string = "";
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: ReferencedDocumentType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { BinaryObjectType } from "./BinaryObjectType";
+import { DocumentCodeType } from "./DocumentCodeType";
+import { FormattedDateTimeType } from "./FormattedDateTimeType";
+import { IDType } from "./IDType";
+import { ReferenceCodeType } from "./ReferenceCodeType";
+import { TextType } from "./TextType";
+
+@XMLRoot({name: "ReferencedDocumentType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class ReferencedDocumentType {
+    @XMLElement({types: [{ name: "IssuerAssignedID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    issuerAssignedID?: IDType;
+
+    @XMLElement({types: [{ name: "URIID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    uRIID?: IDType;
+
+    @XMLElement({types: [{ name: "LineID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    lineID?: IDType;
+
+    @XMLElement({types: [{ name: "TypeCode", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    typeCode?: DocumentCodeType;
+
+    @XMLElement({types: [{ name: "Name", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    name?: TextType;
+
+    @XMLElement({types: [{ name: "AttachmentBinaryObject", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    attachmentBinaryObject?: BinaryObjectType;
+
+    @XMLElement({types: [{ name: "ReferenceTypeCode", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    referenceTypeCode?: ReferenceCodeType;
+
+    @XMLElement({types: [{ name: "FormattedIssueDateTime", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    formattedIssueDateTime?: FormattedDateTimeType;
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: SpecifiedPeriodType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { DateTimeType } from "./DateTimeType";
+
+@XMLRoot({name: "SpecifiedPeriodType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class SpecifiedPeriodType {
+    @XMLElement({types: [{ name: "StartDateTime", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    startDateTime?: DateTimeType;
+
+    @XMLElement({types: [{ name: "EndDateTime", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    endDateTime?: DateTimeType;
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: SupplyChainEventType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { DateTimeType } from "./DateTimeType";
+
+@XMLRoot({name: "SupplyChainEventType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class SupplyChainEventType {
+    @XMLElement({types: [{ name: "OccurrenceDateTime", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    occurrenceDateTime?: DateTimeType;
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: SupplyChainTradeLineItemType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { DocumentLineDocumentType } from "./DocumentLineDocumentType";
+import { LineTradeAgreementType } from "./LineTradeAgreementType";
+import { LineTradeDeliveryType } from "./LineTradeDeliveryType";
+import { LineTradeSettlementType } from "./LineTradeSettlementType";
+import { TradeProductType } from "./TradeProductType";
+
+@XMLRoot({name: "SupplyChainTradeLineItemType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class SupplyChainTradeLineItemType {
+    @XMLElement({types: [{ name: "AssociatedDocumentLineDocument", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    associatedDocumentLineDocument: DocumentLineDocumentType = new DocumentLineDocumentType();
+
+    @XMLElement({types: [{ name: "SpecifiedTradeProduct", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    specifiedTradeProduct: TradeProductType = new TradeProductType();
+
+    @XMLElement({types: [{ name: "SpecifiedLineTradeAgreement", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    specifiedLineTradeAgreement: LineTradeAgreementType = new LineTradeAgreementType();
+
+    @XMLElement({types: [{ name: "SpecifiedLineTradeDelivery", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    specifiedLineTradeDelivery?: LineTradeDeliveryType;
+
+    @XMLElement({types: [{ name: "SpecifiedLineTradeSettlement", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    specifiedLineTradeSettlement: LineTradeSettlementType = new LineTradeSettlementType();
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: SupplyChainTradeTransactionType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { HeaderTradeAgreementType } from "./HeaderTradeAgreementType";
+import { HeaderTradeDeliveryType } from "./HeaderTradeDeliveryType";
+import { HeaderTradeSettlementType } from "./HeaderTradeSettlementType";
+import { SupplyChainTradeLineItemType } from "./SupplyChainTradeLineItemType";
+
+@XMLRoot({name: "SupplyChainTradeTransactionType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class SupplyChainTradeTransactionType {
+    @XMLArray({nested: false, itemTypes: [{name: "IncludedSupplyChainTradeLineItem", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100", itemType: () => SupplyChainTradeLineItemType}]})
+    includedSupplyChainTradeLineItem: SupplyChainTradeLineItemType[] = [];
+
+    @XMLElement({types: [{ name: "ApplicableHeaderTradeAgreement", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    applicableHeaderTradeAgreement: HeaderTradeAgreementType = new HeaderTradeAgreementType();
+
+    @XMLElement({types: [{ name: "ApplicableHeaderTradeDelivery", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    applicableHeaderTradeDelivery: HeaderTradeDeliveryType = new HeaderTradeDeliveryType();
+
+    @XMLElement({types: [{ name: "ApplicableHeaderTradeSettlement", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    applicableHeaderTradeSettlement: HeaderTradeSettlementType = new HeaderTradeSettlementType();
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: TaxCategoryCodeType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+
+@XMLRoot({name: "TaxCategoryCodeType", namespaceUri: "urn:un:unece:uncefact:data:standard:QualifiedDataType:100"})
+export class TaxCategoryCodeType {
+    @XMLText()
+    value: string = "";
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: TaxRegistrationType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { IDType } from "./IDType";
+
+@XMLRoot({name: "TaxRegistrationType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class TaxRegistrationType {
+    @XMLElement({types: [{ name: "ID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    iD: IDType = new IDType();
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: TaxTypeCodeType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+
+@XMLRoot({name: "TaxTypeCodeType", namespaceUri: "urn:un:unece:uncefact:data:standard:QualifiedDataType:100"})
+export class TaxTypeCodeType {
+    @XMLText()
+    value: string = "";
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: TextType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+
+@XMLRoot({name: "TextType", namespaceUri: "urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"})
+export class TextType {
+    @XMLText()
+    value: string = "";
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: TimeReferenceCodeType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+
+@XMLRoot({name: "TimeReferenceCodeType", namespaceUri: "urn:un:unece:uncefact:data:standard:QualifiedDataType:100"})
+export class TimeReferenceCodeType {
+    @XMLText()
+    value: string = "";
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: TradeAccountingAccountType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { IDType } from "./IDType";
+
+@XMLRoot({name: "TradeAccountingAccountType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class TradeAccountingAccountType {
+    @XMLElement({types: [{ name: "ID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    iD: IDType = new IDType();
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: TradeAddressType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { CodeType } from "./CodeType";
+import { CountryIDType } from "./CountryIDType";
+import { TextType } from "./TextType";
+
+@XMLRoot({name: "TradeAddressType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class TradeAddressType {
+    @XMLElement({types: [{ name: "PostcodeCode", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    postcodeCode?: CodeType;
+
+    @XMLElement({types: [{ name: "LineOne", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    lineOne?: TextType;
+
+    @XMLElement({types: [{ name: "LineTwo", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    lineTwo?: TextType;
+
+    @XMLElement({types: [{ name: "LineThree", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    lineThree?: TextType;
+
+    @XMLElement({types: [{ name: "CityName", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    cityName?: TextType;
+
+    @XMLElement({types: [{ name: "CountryID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    countryID: CountryIDType = new CountryIDType();
+
+    @XMLElement({types: [{ name: "CountrySubDivisionName", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    countrySubDivisionName?: TextType;
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: TradeAllowanceChargeType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { AllowanceChargeReasonCodeType } from "./AllowanceChargeReasonCodeType";
+import { AmountType } from "./AmountType";
+import { IndicatorType } from "./IndicatorType";
+import { PercentType } from "./PercentType";
+import { TextType } from "./TextType";
+import { TradeTaxType } from "./TradeTaxType";
+
+@XMLRoot({name: "TradeAllowanceChargeType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class TradeAllowanceChargeType {
+    @XMLElement({types: [{ name: "ChargeIndicator", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    chargeIndicator?: IndicatorType;
+
+    @XMLElement({types: [{ name: "CalculationPercent", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    calculationPercent?: PercentType;
+
+    @XMLElement({types: [{ name: "BasisAmount", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    basisAmount?: AmountType;
+
+    @XMLElement({types: [{ name: "ActualAmount", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    actualAmount: AmountType = new AmountType();
+
+    @XMLElement({types: [{ name: "ReasonCode", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    reasonCode?: AllowanceChargeReasonCodeType;
+
+    @XMLElement({types: [{ name: "Reason", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    reason?: TextType;
+
+    @XMLElement({types: [{ name: "CategoryTradeTax", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    categoryTradeTax?: TradeTaxType;
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: TradeContactType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { TextType } from "./TextType";
+import { UniversalCommunicationType } from "./UniversalCommunicationType";
+
+@XMLRoot({name: "TradeContactType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class TradeContactType {
+    @XMLElement({types: [{ name: "PersonName", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    personName?: TextType;
+
+    @XMLElement({types: [{ name: "DepartmentName", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    departmentName?: TextType;
+
+    @XMLElement({types: [{ name: "TelephoneUniversalCommunication", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    telephoneUniversalCommunication?: UniversalCommunicationType;
+
+    @XMLElement({types: [{ name: "EmailURIUniversalCommunication", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    emailURIUniversalCommunication?: UniversalCommunicationType;
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: TradeCountryType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { CountryIDType } from "./CountryIDType";
+
+@XMLRoot({name: "TradeCountryType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class TradeCountryType {
+    @XMLElement({types: [{ name: "ID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    iD: CountryIDType = new CountryIDType();
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: TradePartyType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { IDType } from "./IDType";
+import { LegalOrganizationType } from "./LegalOrganizationType";
+import { TaxRegistrationType } from "./TaxRegistrationType";
+import { TextType } from "./TextType";
+import { TradeAddressType } from "./TradeAddressType";
+import { TradeContactType } from "./TradeContactType";
+import { UniversalCommunicationType } from "./UniversalCommunicationType";
+
+@XMLRoot({name: "TradePartyType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class TradePartyType {
+    @XMLArray({nested: false, itemTypes: [{name: "ID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100", itemType: () => IDType}]})
+    iD?: IDType[];
+
+    @XMLArray({nested: false, itemTypes: [{name: "GlobalID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100", itemType: () => IDType}]})
+    globalID?: IDType[];
+
+    @XMLElement({types: [{ name: "Name", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    name?: TextType;
+
+    @XMLElement({types: [{ name: "Description", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    description?: TextType;
+
+    @XMLElement({types: [{ name: "SpecifiedLegalOrganization", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    specifiedLegalOrganization?: LegalOrganizationType;
+
+    @XMLElement({types: [{ name: "DefinedTradeContact", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    definedTradeContact?: TradeContactType;
+
+    @XMLElement({types: [{ name: "PostalTradeAddress", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    postalTradeAddress?: TradeAddressType;
+
+    @XMLElement({types: [{ name: "URIUniversalCommunication", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    uRIUniversalCommunication?: UniversalCommunicationType;
+
+    @XMLArray({nested: false, itemTypes: [{name: "SpecifiedTaxRegistration", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100", itemType: () => TaxRegistrationType}]})
+    specifiedTaxRegistration?: TaxRegistrationType[];
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: TradePaymentTermsType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { DateTimeType } from "./DateTimeType";
+import { IDType } from "./IDType";
+import { TextType } from "./TextType";
+
+@XMLRoot({name: "TradePaymentTermsType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class TradePaymentTermsType {
+    @XMLElement({types: [{ name: "Description", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    description?: TextType;
+
+    @XMLElement({types: [{ name: "DueDateDateTime", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    dueDateDateTime?: DateTimeType;
+
+    @XMLElement({types: [{ name: "DirectDebitMandateID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    directDebitMandateID?: IDType;
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: TradePriceType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { AmountType } from "./AmountType";
+import { QuantityType } from "./QuantityType";
+import { TradeAllowanceChargeType } from "./TradeAllowanceChargeType";
+
+@XMLRoot({name: "TradePriceType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class TradePriceType {
+    @XMLElement({types: [{ name: "ChargeAmount", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    chargeAmount: AmountType = new AmountType();
+
+    @XMLElement({types: [{ name: "BasisQuantity", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    basisQuantity?: QuantityType;
+
+    @XMLElement({types: [{ name: "AppliedTradeAllowanceCharge", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    appliedTradeAllowanceCharge?: TradeAllowanceChargeType;
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: TradeProductType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { IDType } from "./IDType";
+import { ProductCharacteristicType } from "./ProductCharacteristicType";
+import { ProductClassificationType } from "./ProductClassificationType";
+import { TextType } from "./TextType";
+import { TradeCountryType } from "./TradeCountryType";
+
+@XMLRoot({name: "TradeProductType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class TradeProductType {
+    @XMLElement({types: [{ name: "GlobalID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    globalID?: IDType;
+
+    @XMLElement({types: [{ name: "SellerAssignedID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    sellerAssignedID?: IDType;
+
+    @XMLElement({types: [{ name: "BuyerAssignedID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    buyerAssignedID?: IDType;
+
+    @XMLElement({types: [{ name: "Name", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    name: TextType = new TextType();
+
+    @XMLElement({types: [{ name: "Description", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    description?: TextType;
+
+    @XMLArray({nested: false, itemTypes: [{name: "ApplicableProductCharacteristic", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100", itemType: () => ProductCharacteristicType}]})
+    applicableProductCharacteristic?: ProductCharacteristicType[];
+
+    @XMLArray({nested: false, itemTypes: [{name: "DesignatedProductClassification", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100", itemType: () => ProductClassificationType}]})
+    designatedProductClassification?: ProductClassificationType[];
+
+    @XMLElement({types: [{ name: "OriginTradeCountry", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    originTradeCountry?: TradeCountryType;
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: TradeSettlementFinancialCardType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { IDType } from "./IDType";
+import { TextType } from "./TextType";
+
+@XMLRoot({name: "TradeSettlementFinancialCardType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class TradeSettlementFinancialCardType {
+    @XMLElement({types: [{ name: "ID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    iD: IDType = new IDType();
+
+    @XMLElement({types: [{ name: "CardholderName", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    cardholderName?: TextType;
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: TradeSettlementHeaderMonetarySummationType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { AmountType } from "./AmountType";
+
+@XMLRoot({name: "TradeSettlementHeaderMonetarySummationType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class TradeSettlementHeaderMonetarySummationType {
+    @XMLElement({types: [{ name: "LineTotalAmount", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    lineTotalAmount: AmountType = new AmountType();
+
+    @XMLElement({types: [{ name: "ChargeTotalAmount", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    chargeTotalAmount?: AmountType;
+
+    @XMLElement({types: [{ name: "AllowanceTotalAmount", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    allowanceTotalAmount?: AmountType;
+
+    @XMLElement({types: [{ name: "TaxBasisTotalAmount", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    taxBasisTotalAmount: AmountType = new AmountType();
+
+    @XMLArray({nested: false, itemTypes: [{name: "TaxTotalAmount", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100", itemType: () => AmountType}]})
+    taxTotalAmount?: AmountType[];
+
+    @XMLElement({types: [{ name: "RoundingAmount", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    roundingAmount?: AmountType;
+
+    @XMLElement({types: [{ name: "GrandTotalAmount", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    grandTotalAmount: AmountType = new AmountType();
+
+    @XMLElement({types: [{ name: "TotalPrepaidAmount", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    totalPrepaidAmount?: AmountType;
+
+    @XMLElement({types: [{ name: "DuePayableAmount", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    duePayableAmount: AmountType = new AmountType();
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: TradeSettlementLineMonetarySummationType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { AmountType } from "./AmountType";
+
+@XMLRoot({name: "TradeSettlementLineMonetarySummationType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class TradeSettlementLineMonetarySummationType {
+    @XMLElement({types: [{ name: "LineTotalAmount", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    lineTotalAmount: AmountType = new AmountType();
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: TradeSettlementPaymentMeansType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { CreditorFinancialAccountType } from "./CreditorFinancialAccountType";
+import { CreditorFinancialInstitutionType } from "./CreditorFinancialInstitutionType";
+import { DebtorFinancialAccountType } from "./DebtorFinancialAccountType";
+import { PaymentMeansCodeType } from "./PaymentMeansCodeType";
+import { TextType } from "./TextType";
+import { TradeSettlementFinancialCardType } from "./TradeSettlementFinancialCardType";
+
+@XMLRoot({name: "TradeSettlementPaymentMeansType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class TradeSettlementPaymentMeansType {
+    @XMLElement({types: [{ name: "TypeCode", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    typeCode: PaymentMeansCodeType = new PaymentMeansCodeType();
+
+    @XMLElement({types: [{ name: "Information", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    information?: TextType;
+
+    @XMLElement({types: [{ name: "ApplicableTradeSettlementFinancialCard", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    applicableTradeSettlementFinancialCard?: TradeSettlementFinancialCardType;
+
+    @XMLElement({types: [{ name: "PayerPartyDebtorFinancialAccount", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    payerPartyDebtorFinancialAccount?: DebtorFinancialAccountType;
+
+    @XMLElement({types: [{ name: "PayeePartyCreditorFinancialAccount", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    payeePartyCreditorFinancialAccount?: CreditorFinancialAccountType;
+
+    @XMLElement({types: [{ name: "PayeeSpecifiedCreditorFinancialInstitution", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    payeeSpecifiedCreditorFinancialInstitution?: CreditorFinancialInstitutionType;
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: TradeTaxType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { AmountType } from "./AmountType";
+import { CodeType } from "./CodeType";
+import { DateType } from "./DateType";
+import { PercentType } from "./PercentType";
+import { TaxCategoryCodeType } from "./TaxCategoryCodeType";
+import { TaxTypeCodeType } from "./TaxTypeCodeType";
+import { TextType } from "./TextType";
+import { TimeReferenceCodeType } from "./TimeReferenceCodeType";
+
+@XMLRoot({name: "TradeTaxType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class TradeTaxType {
+    @XMLElement({types: [{ name: "CalculatedAmount", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    calculatedAmount?: AmountType;
+
+    @XMLElement({types: [{ name: "TypeCode", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    typeCode: TaxTypeCodeType = new TaxTypeCodeType();
+
+    @XMLElement({types: [{ name: "ExemptionReason", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    exemptionReason?: TextType;
+
+    @XMLElement({types: [{ name: "BasisAmount", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    basisAmount?: AmountType;
+
+    @XMLElement({types: [{ name: "CategoryCode", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    categoryCode: TaxCategoryCodeType = new TaxCategoryCodeType();
+
+    @XMLElement({types: [{ name: "ExemptionReasonCode", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    exemptionReasonCode?: CodeType;
+
+    @XMLElement({types: [{ name: "TaxPointDate", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    taxPointDate?: DateType;
+
+    @XMLElement({types: [{ name: "DueDateTypeCode", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    dueDateTypeCode?: TimeReferenceCodeType;
+
+    @XMLElement({types: [{ name: "RateApplicablePercent", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    rateApplicablePercent?: PercentType;
+
+}
+
+"
+`;
+
+exports[`EXPERIMENT: xsd command should generate correct code for xsd file and write to output directory: UniversalCommunicationType.ts 1`] = `
+"import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from "@xinvoice/xmldom-decorators";
+
+import { IDType } from "./IDType";
+import { TextType } from "./TextType";
+
+@XMLRoot({name: "UniversalCommunicationType", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"})
+export class UniversalCommunicationType {
+    @XMLElement({types: [{ name: "URIID", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    uRIID?: IDType;
+
+    @XMLElement({types: [{ name: "CompleteNumber", namespaceUri: "urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" }]})
+    completeNumber?: TextType;
+
+}
+
+"
+`;

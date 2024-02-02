@@ -1,6 +1,34 @@
 import { EOL } from "os";
 import { SchemaClass, SchemaMember } from "./classtypes";
 
+export function _experiment_formatClasses(classes: SchemaClass[]): Record<string, string> {
+    const outputFiles: Record<string, string> = {};
+    for (let cls of classes) {
+        const output: string[] = [];
+        
+        // Import the decorators from @xinvoice/xmldom-decorators lib
+        output.push("import { XMLRoot, XMLElement, XMLArray, XMLAttribute, XMLText } from \"@xinvoice/xmldom-decorators\";" + EOL + EOL)
+
+        // Add the import statements for the complex types that are used in this class
+        const membersToImport: string[] = [];
+        for (let m of cls.members) {
+            if (m.type.type === "complexType") {
+                membersToImport.push(m.type.javaScriptType);
+            }
+        }
+        const uniqueMembersToImport = [...new Set(membersToImport)].sort();
+        for (let m of uniqueMembersToImport) {
+            output.push("import { " + m + " } from \"./" + m + "\";" + EOL);
+        }
+        output.push(EOL);
+
+        // Add the XMLRoot decorator class
+        formatClass(cls, output);
+        outputFiles[cls.javaScriptType] = output.join("");
+    }
+    return outputFiles;
+}
+
 export function formatClasses(classes: SchemaClass[]): string {
     const output: string[] = [];
 
