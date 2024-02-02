@@ -17,25 +17,13 @@ First check out the source code and bootstrap the monorepo build environment:
 ```bash
 git clone https://github.com/xinvoice/xmldom-decorators.git
 cd xmldom-decorators
-npm install   # installs blerf in the root project
+npm install
 ```
 
 Build, run tests and execute a REST API sample:
 
 ```bash
-npm run build # shortcut for ./node_modules/.bin/blerf build
-npm run test  # shortcut for ./node_modules/.bin/blerf test
+npm run build
+npm run test
 node ./packages/sample-clients location
-```
-
-## Publishing a version
-
-To publish a new version, simply create a new tag and push it:
-
-```
-
-npm version <minor|patch|major> --ws
-git add **/package.json
-npm version patch --include-workspace-root
-git push --follow-tags
 ```
