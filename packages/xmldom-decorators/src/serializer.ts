@@ -6,11 +6,21 @@ export interface SerializerContext {
     getQualifiedName(elementName: string, namespaceUri: string): string;
 }
 
+export type ExperimentFeatureFlags = "SERIALIZE_ALL_NAMESPACES_IN_ROOT"
+
 export class XMLDecoratorSerializer implements SerializerContext {
     private factory: DOMImplementation = new DOMImplementation();
     private document: Document|null = null;
     private prefixCounter: number = 0;
     private prefixMap: {[key: string]: string} = {};
+    private experimentFlags: Record<ExperimentFeatureFlags, boolean> ={
+        "SERIALIZE_ALL_NAMESPACES_IN_ROOT": false
+    }
+    private experimentDocumentNamespaces: string[] = []
+
+    public setExperimentFlag(flag: ExperimentFeatureFlags, value: boolean) {
+        this.experimentFlags[flag] = value;
+    }   
 
     public serialize(data: any, type: Function, defaultNSPrefixMap?: any, elementName?: string, namespaceUri?: string): string {
         this.prefixCounter = 0;
@@ -50,6 +60,21 @@ export class XMLDecoratorSerializer implements SerializerContext {
             throw new Error("Internal error. Document is null.");
         }
 
+        /**
+         * @Experimental SERIALIZE_ALL_NAMESPACES_IN_ROOT
+         * Add all existing namespaces to the root element
+         */
+        if (this.experimentFlags.SERIALIZE_ALL_NAMESPACES_IN_ROOT) {
+            const rootElement = this.document.documentElement;
+            const uniqueRootNamespaces = [...new Set(this.experimentDocumentNamespaces)]
+                .filter((ns) => ns !== rootElement.namespaceURI)
+
+            uniqueRootNamespaces.forEach((ns) => {
+                const prefix = this.prefixMap[ns];
+                rootElement.setAttribute(`xmlns:${prefix}`, ns);
+            });
+        }
+
         const serializer = new XMLSerializer();
         const result = serializer.serializeToString(this.document);
         this.document = null;
@@ -84,7 +109,7 @@ export class XMLDecoratorSerializer implements SerializerContext {
         if (parentNode === null) {
             element = this.document.documentElement;
         } else {
-            element = this.document.createElementNS(namespaceUri, this.getQualifiedName(elementName, namespaceUri));
+            element = this.document.createElementNS(this.getNamespaceUri(namespaceUri), this.getQualifiedName(elementName, namespaceUri));
             parentNode.appendChild(element);
         }
 
@@ -177,7 +202,7 @@ export class XMLDecoratorSerializer implements SerializerContext {
             throw new Error("Internal error.");
         }
 
-        const element = this.document.createElementNS(namespaceUri, this.getQualifiedName(name, namespaceUri));
+        const element = this.document.createElementNS(this.getNamespaceUri(namespaceUri), this.getQualifiedName(name, namespaceUri));
         element.appendChild(this.document.createTextNode(this.convertValue(data, elementType)));
         parentNode.appendChild(element);
     }
@@ -221,7 +246,7 @@ export class XMLDecoratorSerializer implements SerializerContext {
         }
 
         if (schema.nested) {
-            var nestedNode = this.document.createElementNS(schema.namespaceUri, this.getQualifiedName(schema.name, schema.namespaceUri));
+            var nestedNode = this.document.createElementNS(this.getNamespaceUri(schema.namespaceUri), this.getQualifiedName(schema.name, schema.namespaceUri));
             parentNode.appendChild(nestedNode);
             parentNode = nestedNode;
         }
@@ -241,6 +266,21 @@ export class XMLDecoratorSerializer implements SerializerContext {
             const itemName = getArrayItemName(schema, dataItemType);
 
             this.serializeElement(parentNode, dataItemType.name || itemName, dataItemType.namespaceUri || "", dataItemType.itemType(), data[i]);
+        }
+    }
+
+    /**
+     * @Experimental SERIALIZE_ALL_NAMESPACES_IN_ROOT
+     * Don't use namespaceUri when adding element as a child to the root element
+     */
+    private getNamespaceUri(namespaceUri: string): string | null {
+        if (this.experimentFlags.SERIALIZE_ALL_NAMESPACES_IN_ROOT) {
+            if (typeof namespaceUri === "string" && namespaceUri.length > 0) {
+                this.experimentDocumentNamespaces.push(namespaceUri);
+            }
+            return null;
+        }else {
+            return namespaceUri;
         }
     }
 }
