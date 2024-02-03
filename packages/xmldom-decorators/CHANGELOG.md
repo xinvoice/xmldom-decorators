@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/xinvoice/xmldom-decorators/compare/xmldom-decorators-v1.2.0...xmldom-decorators-v1.3.0) (2024-02-03)
+
+
+### Features
+
+* Implement serialize all namespacess in root ([a8e2a7b](https://github.com/xinvoice/xmldom-decorators/commit/a8e2a7b74117aedf8c50698f37461aa28aabd79e))
+
 ## [1.2.0](https://github.com/xinvoice/xmldom-decorators/compare/xmldom-decorators-v1.1.0...xmldom-decorators-v1.2.0) (2024-02-02)
 
 
