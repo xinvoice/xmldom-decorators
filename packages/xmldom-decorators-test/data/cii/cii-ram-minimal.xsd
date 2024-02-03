@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ram="urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:udt="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100"
+           targetNamespace="urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100"
+           elementFormDefault="qualified">
+    <xs:import namespace="urn:un:unece:uncefact:data:standard:QualifiedDataType:100" schemaLocation="cii-udt-minimal.xsd"/>
+    <xs:complexType name="DocumentContextParameterType">
+        <xs:sequence>
+            <xs:element name="ID" type="udt:IDType" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ExchangedDocumentContextType">
+        <xs:sequence>
+            <xs:element name="GuidelineSpecifiedDocumentContextParameter" type="ram:DocumentContextParameterType"/>
+            <xs:element name="GuidelineSpecifiedDocumentContextParameter2" type="ram:DocumentContextParameterType"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

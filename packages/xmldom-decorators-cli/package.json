@@ -30,7 +30,7 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "@xinvoice/xmldom-decorators": "1.2.0",
+    "@xinvoice/xmldom-decorators": "file:../xmldom-decorators",
     "commander": "^11.1.0"
   },
   "jest": {
