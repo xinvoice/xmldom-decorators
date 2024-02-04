@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "@xinvoice/xmldom-decorators": "1.3.0",
-    "commander": "^11.1.0"
+    "commander": "^12.0.0"
   },
   "jest": {
     "transform": {
